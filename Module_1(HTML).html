@@ -19,8 +19,10 @@
         }
 
         body {
-            background-image: url(Image/blurred-background-1.jpg);
+            background-image:  url(Image/blurred-background-1.jpg);
             border: 10px solid rgb(2, 83, 70);
+            background-repeat:inherit;
+            
         }
 
         .hr {
@@ -55,6 +57,13 @@
             width: 600px;
             height: 300px;
         }
+        th, td {
+    background-color: rgb(241, 238, 48);
+    border: 1px solid black;
+}
+table{
+    color: blue;
+}
     </style>
 </head>
 
@@ -139,8 +148,34 @@
         <li>What is the difference between a block-level element and an inline element?</li>
 
        <p><Strong>Answer :- </Strong></p>
-        <img src="./Image/Inline vs Block Elements.jpg" alt="Inline vs Block Elements"> 
-
+        <!-- <img src="./Image/Inline vs Block Elements.jpg" alt="Inline vs Block Elements">  -->
+        <table>
+            <thead>
+                <tr>
+                    <th> Inline Elements </th>
+                    <th> Block Elements </th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Occupy only sufficient width required.</td>
+                    <td>The full width irrespective of their sufficiency.</td>
+                </tr>
+                <tr>
+                    <td>Don’t start in a new line.</td>
+                    <td>Always start in a line.</td>
+                </tr>
+                <tr>
+                    <td>Allow other inline elements to sit behind.</td>
+                    <td>Doesn’t allow other elements to sit behind</td>
+                </tr>
+                <tr>
+                    <td>Don’t have top and bottom margin</td>
+                    <td>Have top and bottom margin.</td>
+                </tr>
+            </tbody>
+        </table>
         <hr>
         <li>How to create a Hyperlink in HTML?</li>
 
