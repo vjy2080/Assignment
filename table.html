@@ -1,53 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
-<style>
-th, td {
-    background-color: rgb(241, 238, 48);
-    border: 1px solid black;
-}
-table{
-    color: blue;
-}
-body{
-    background-color: black;
-}
-</style>
-
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./StyleSheet/Module_1(HTML).css" class="style"> -->
+    <style>
+       
+        
+    </style>
 </head>
-
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th> Inline Elements </th>
-                <th> Block Elements </th>
+<table  border="1"
+cellpadding="4"
+cellspacing="50" >
+    <thead>
+   <tr> <th>Cellpadding</th>
+<th>Cellspacing</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>It specifies the space between the border of a table cell and its contents.</td>
+        <td>It specifies the space between adjacent cells.</td>
+    </tr>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Occupy only sufficient width required.</td>
-                <td>The full width irrespective of their sufficiency.</td>
-            </tr>
-            <tr>
-                <td>Don’t start in a new line.</td>
-                <td>Always start in a line.</td>
-            </tr>
-            <tr>
-                <td>Allow other inline elements to sit behind.</td>
-                <td>Doesn’t allow other elements to sit behind</td>
-            </tr>
-            <tr>
-                <td>Don’t have top and bottom margin</td>
-                <td>Have top and bottom margin.</td>
-            </tr>
-        </tbody>
-    </table>
+    <tr>
+        <td>It is created by using HTML &lt;table&gt; tag but type attribute is set to cellpadding.</td>
+        <td>It is also created by using HTML &lt;table&gt; tag but type attribute is set to cellspacing.</td>
+    </tr>
+
+    <tr>
+        <td>It is mainly meant for a single cell.</td>
+        <td>Cellspacing can get subjected to more than one cell.</td>
+    </tr>
+
+    <tr>
+        <td>The default cellpadding value is 1</td>
+        <td>Whereas, the default cellspacing value is 2</td>
+    </tr>
+    <tr>
+        <td>Cellpadding is widely used and considered to be an effective mean</td>
+        <td>Cellspacing is less effective than Cellpadding.</td>
+    </tr>
+    <tr>
+        <td>Cellpadding is an attribute</td>
+        <td>Cellspacing is also an attribute.</td>	
+	
+	
+</tbody>
+</table>
 </body>
-
 </html>

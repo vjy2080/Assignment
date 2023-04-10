@@ -1,0 +1,68 @@
+h1,
+h2 {
+    text-align: center;
+    color: rgb(177, 16, 16);
+}
+
+strong {
+    color: rgb(49, 73, 2);
+    font-size: 23px;
+}
+
+body {
+    background-image: url(../Image/blurred-background-1.jpg);
+    border: 10px solid rgb(2, 83, 70);
+    background-repeat: inherit;
+}
+
+.hr {
+    border: 2px solid black;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 20px;
+    color: blue;
+}
+
+h3 {
+    font-style: italic;
+    text-align: right;
+    margin-right: 50px;
+    color: rgb(133, 3, 42);
+    font-size: 30px;
+}
+
+.inlineList {
+    font-size: 20px;
+    color: blue;
+    font-weight: normal;
+}
+
+img {
+    margin-left: 90px;
+    width: 600px;
+    height: 300px;
+}
+
+th,
+td {
+
+    padding: 10px;
+    border: 5px groove orange;
+    background-color: rgba(0, 0, 0, 0.079);
+}
+
+table {
+    color: blue;
+    
+}
+ul{
+ color:rgb(8, 86, 4);
+ type:square;
+}

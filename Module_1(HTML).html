@@ -5,66 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front_End Assignment</title>
-    <style>
-        h1,
-        h2 {
-            text-align: center;
-            color: rgb(177, 16, 16);
-        }
-
-        strong {
-            color: rgb(49, 73, 2);
-            font-size: 23px;
-        }
-
-        body {
-            background-image:  url(Image/blurred-background-1.jpg);
-            border: 10px solid rgb(2, 83, 70);
-            background-repeat:inherit;
-            
-        }
-
-        .hr {
-            border: 2px solid black;
-        }
-
-        li {
-            font-size: 20px;
-            font-weight: bold;
-
-        }
-
-        p {
-            font-size: 20px;
-            color: blue;
-        }
-
-        h3 {
-            font-style: italic;
-            text-align: right;
-            margin-right: 50px;
-            color: rgb(133, 3, 42);
-            font-size: 30px;
-        }
-        .inlineList{
-            font-size: 20px;
-            color: blue;
-            font-weight: normal;
-        }
-        img{
-            margin-left: 90px;
-            width: 600px;
-            height: 300px;
-        }
-        th, td {
-    background-color: rgb(241, 238, 48);
-    border: 1px solid black;
-}
-table{
-    color: blue;
-}
-    </style>
+    <title>Module-1(HTML)</title>
+    <link rel="stylesheet" href="./StyleSheet/Module_1(HTML).css" class="style">   
 </head>
 
 <body>
@@ -109,28 +51,33 @@ table{
             HTML Lists are used to specify lists of information. All lists may contain one or more list elements. There
             are three different types of HTML lists:
         <ol>
-           <li class="inlineList">Ordered List or Numbered List (ol)</li>
-           <li class="inlineList">Unordered List or Bulleted List (ul)</li>
-           <li class="inlineList">Description List or Definition List (dl)</li>
-        </ol></p>
+            <li class="inlineList">Ordered List or Numbered List (ol)</li>
+            <li class="inlineList">Unordered List or Bulleted List (ul)</li>
+            <li class="inlineList">Description List or Definition List (dl)</li>
+        </ol>
+        </p>
         <hr>
         <li> What is the &#8216; class &#8217; attribute in HTML?</li>
 
         <p><Strong>Answer :- </Strong>
-            The HTML class attribute is used to specify a single or multiple class names for an HTML element. The class name can be used by CSS and JavaScript to do some tasks for HTML elements.</p>
+            The HTML class attribute is used to specify a single or multiple class names for an HTML element. The class
+            name can be used by CSS and JavaScript to do some tasks for HTML elements.</p>
 
         <hr>
         <li>What is the difference between the &#8216; id &#8217; attribute and the &#8216; class &#8217; attribute of
             HTML elements?</li>
 
         <p><Strong>Answer :- </Strong>
-            difference between Class and ID: A Class name can be used by multiple HTML elements, while an ID name must only be used by one HTML element within the page</p>
+            Difference between Class and ID: A Class name can be used by multiple HTML elements, while an ID name must
+            only be used by one HTML element within the page</p>
 
         <hr>
         <li>What are the various formatting tags in HTML? </li>
 
         <p><Strong>Answer :- </Strong>
-            HTML provides many predefined elements that are used to change the formatting of text. The formatting can be used to set the text styles (like bold, italic, or emphasized, etc.), highlighting the text, making text superscript and subscript, etc.</p>
+            HTML provides many predefined elements that are used to change the formatting of text. The formatting can be
+            used to set the text styles (like bold, italic, or emphasized, etc.), highlighting the text, making text
+            superscript and subscript, etc.</p>
 
         <hr>
         <li>How is Cell Padding different from Cell Spacing? </li>
@@ -138,23 +85,68 @@ table{
         <p><Strong>Answer :- </Strong>
         </p>
 
+        <table>
+            <thead>
+           <tr> <th>Cellpadding</th>
+        <th>Cellspacing</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>It specifies the space between the border of a table cell and its contents.</td>
+                <td>It specifies the space between adjacent cells.</td>
+            </tr>
+        
+            <tr>
+                <td>It is created by using HTML &lt;table&gt; tag but type attribute is set to cellpadding.</td>
+                <td>It is also created by using HTML &lt;table&gt; tag but type attribute is set to cellspacing.</td>
+            </tr>
+        
+            <tr>
+                <td>It is mainly meant for a single cell.</td>
+                <td>Cellspacing can get subjected to more than one cell.</td>
+            </tr>
+        
+            <tr>
+                <td>The default cellpadding value is 1</td>
+                <td>Whereas, the default cellspacing value is 2</td>
+            </tr>
+            <tr>
+                <td>Cellpadding is widely used and considered to be an effective mean</td>
+                <td>Cellspacing is less effective than Cellpadding.</td>
+            </tr>
+            <tr>
+                <td>Cellpadding is an attribute</td>
+                <td>Cellspacing is also an attribute.</td>	
+            </tr>
+            
+            
+        </tbody>
+        </table>
+<br>
+        <ul> 
+            <li> Note :- The &lt;table&gt; tag has cellpadding and cellspacing attributes which are not supported in HTML5, that’s why it is recommended to use the CSS padding and border-spacing properties instead.</li>
+        </ul>
+        
+
         <hr>
         <li>How can we club two or more rows or columns into a single row or column in an HTML table?</li>
 
         <p><Strong>Answer :- </Strong>
-            We use the colspan and rowspan attribute, to merge cells in HTML.The attribute should be placed inside the &lt; td &gt; tag.</p>
+            We use the colspan and rowspan attribute, to merge cells in HTML.The attribute should be placed inside the
+            &lt; td &gt; tag.</p>
 
         <hr>
         <li>What is the difference between a block-level element and an inline element?</li>
 
-       <p><Strong>Answer :- </Strong></p>
-        <!-- <img src="./Image/Inline vs Block Elements.jpg" alt="Inline vs Block Elements">  -->
+        <p><Strong>Answer :- </Strong></p>
+
         <table>
             <thead>
                 <tr>
                     <th> Inline Elements </th>
                     <th> Block Elements </th>
-    
+
                 </tr>
             </thead>
             <tbody>
