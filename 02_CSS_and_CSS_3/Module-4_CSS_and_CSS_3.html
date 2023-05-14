@@ -1,32 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module-4_CSS_and_CSS_3</title>
+    <link rel="stylesheet" href="../01_WD-HTML/StyleSheet/Module_1(HTML).css" class="style">
 </head>
+
 <body>
-<ol>
-<li> What are the benefits of using CSS? </li>
-<li> What are the disadvantages of CSS? </li>
-<li> What is the difference between CSS2 and CSS3? </li>
-<li> Name a few CSS style components </li>
-<li> What do you understand by CSS opacity? </li>
-<li> How can the background color of an element be changed? </li>
-<li> How can image repetition of the backup be controlled? </li>
-<li> What is the use of the background-position property? </li>
-<li> Which property controls the image scroll in the background? </li>
-<li> Why should background and color be used as separate properties? </li>
-<li> How to center block elements using CSS1? </li>
-<li> How to maintain the CSS specifications? </li>
-<li> What are the ways to integrate CSS as a web page? </li>
-<li> What is embedded style sheets? </li>
-<li> What are the external style sheets? </li>
-<li> What are the advantages and disadvantages of using external style sheets? </li>
-<li> What is the meaning of the CSS selector? </li>
-<li> What are the media types allowed by CSS? </li>
-<li> What is the rule set? </li>
-</ol>
+    <header>
+        <h1>Part 1 : Web Designing</h1>
+        <h2>Module-4(CSS_and_CSS_3)</h2>
+        <h3>Vijay G. Prajapati</h3>
+    </header>
+    <ol>
+        <hr class="hr">
+        <li> What are the benefits of using CSS? </li>
+
+        <p><Strong>Answer :-</Strong>
+        <ul>
+
+            <li class="inlineList">CSS plays an important role, by using CSS you simply got to specify a
+                repeated style for element once & use it multiple times as because CSS will automatically apply
+                the required styles.</li>
+            <li class="inlineList">The main advantage of CSS is that style is applied consistently across
+                variety of sites. One instruction can control several areas which is advantageous.</li>
+            <li class="inlineList">Web designers needs to use few lines of programming for every page improving
+                site speed.</li>
+            <li class="inlineList">Cascading sheet not only simplifies website development, but also simplifies
+                the maintenance as a change of one line of code affects the whole web site and maintenance time.
+            </li>
+            <li class="inlineList">It is less complex therefore the effort are significantly reduced.</li>
+            <li class="inlineList">It helps to form spontaneous and consistent changes.</li>
+            <li class="inlineList">CSS changes are device friendly. With people employing a batch of various
+                range of smart devices to access websites over the web, there’s a requirement for responsive web
+                design.</li>
+            <li class="inlineList">It has the power for re-positioning. It helps us to determine the changes
+                within the position of web elements who are there on the page.</li>
+            <li class="inlineList">These bandwidth savings are substantial figures of insignificant tags that
+                are indistinct from a mess of pages.</li>
+            <li class="inlineList">Easy for the user to customize the online page</li>
+            <li class="inlineList">It reduces the file transfer size.</li>
+        </ul>
+        </p>
+
+        <hr>
+
+
+        <li> What are the disadvantages of CSS? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li class="inlineList">CSS, CSS 1 up to CSS3, result in creating of confusion among web browsers.</li>
+            <li class="inlineList">With CSS, what works with one browser might not always work with another. The web
+                developers need to test for compatibility, running the program across multiple browsers.</li>
+            <li class="inlineList">There exists a scarcity of security.</li>
+            <li class="inlineList">After making the changes we need to confirm the compatibility if they appear. The
+                similar change affects on all the browsers.</li>
+            <li class="inlineList">The programming language world is complicated for non-developers and beginners.
+                Different levels of CSS i.e. CSS, CSS 2, CSS 3 are often quite confusing.</li>
+            <li class="inlineList">Browser compatibility (some styles sheet are supported and some are not).</li>
+            <li class="inlineList">CSS works differently on different browsers. IE and Opera supports CSS as different
+                logic.</li>
+            <li class="inlineList">There might be cross-browser issues while using CSS.</li>
+            <li class="inlineList">There are multiple levels which creates confusion for non-developers and beginners.
+            </li>
+        </ul>
+        </p>
+
+        <hr>
+        <li> What is the difference between CSS2 and CSS3? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <table>
+
+            <tr>
+                <th width="50%"> CSS2 </th>
+
+                <th width="50%"> CSS3 </th>
+
+            </tr>
+            <tr>
+                <td> CSS splits up different sections of the code into modules,</td>
+                <td>Both CSS and HTML were put into a
+                    single file, there was no concept of
+                    modules before.</td>
+            </tr>
+            <tr>
+                <td> There are new ways you can write CSS rules with a bunch of CSS selectors</td>
+                <td>There were no new ways of writing
+                    the CSS rules.</td>
+            </tr>
+            <tr>
+                <td> There is no backward compatibility with CSS2</td>
+                <td>There is backward compatibility
+                    maintained with CSS 3</td>
+            </tr>
+            <tr>
+                <td> With CSS2 only web safe fonts can be used</td>
+                <td>With CSS3 special fonts can be used
+                    such as those in Google Fonts and
+                    TypeCast</td>
+            </tr>
+            <tr>
+                <td> With CSS2 the concept of simple selectors were present</td>
+                <td>With CSS3 the selectors were called
+                    as a sequence of simple seletors.com</td>
+            </tr>
+            <tr>
+                <td> Using CSS2, for rounded borders, coding the css styles were complex</td>
+                <td>With CSS3, there is provision for
+                    automatically assigning rounded
+                    borders to objects21</td>
+            </tr>
+            <tr>
+                <td> CSS 2, splitting text into multiple columns required complex coding because the standard was not
+                    equipped enough to break the text into columns so that it would fit into a box</td>
+                <td>CSS3 has the capability to split text
+                    into various columns so that each
+                    text block appears as a layout of the
+                    newspaper.
+                </td>
+            </tr>
+            <tr>
+                <td> CSS 2 Doesn't support the Border-Box property</td>
+                <td>CSS3 supports the Border-Box
+                    property
+                </td>
+            </tr>
+        </table>
+
+        </p>
+
+        <hr>
+        <li> Name a few CSS style components </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li type="square">
+                <h4>Follow are the components use in CSS style</h4>
+            </li>
+            <li class="inlineList"><b> Selector:</b> class name, id name or element name that is target</li>
+            <li class="inlineList"><b> Attribute:</b> name of the attribute you want to style for example border,
+                color,background, position etc.</li>
+            <li class="inlineList"><b> Value of Property: </b> value that will be assigned to attribute.</li>
+        </ul>
+
+        </p>
+
+        <hr>
+        <li> What do you understand by CSS opacity? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li class="inlineList"> The opacity property sets the opacity level for an element.</li>
+            <li class="inlineList"> The opacity-level describes the transparency-level, where 1 is not transparent at
+                all, 0.5 is 50% see-through, and 0 is completely transparent.</li>
+            <li type="square"> Note: When using the opacity property to add transparency to the background of an
+                element, all of its child elements become transparent as well. This can make the text inside a fully
+                transparent element hard to read. If you do not want to apply opacity to child elements, use RGBA color
+                values instead</li>
+        </ul>
+        </p>
+
+        <hr>
+        <li> How can the background color of an element be changed? </li>
+
+        <p><Strong>Answer :- </Strong>
+            We can set background color of an element by css like below example :-
+        <h4>In below example we are set "red background color" to Heading-1</h4>
+
+        <code>
+                <pre>
+            &lt;html&gt;
+
+            &lt;head&gt;
+                &lt;style&gt;
+                    h1 {
+                        background-color: red;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+
+            &lt;body&gt;
+                &lt;h1&gt;This is Heading-1 with Background color Red&lt;/h1&gt;
+            &lt;/body&gt;
+
+            &lt;/html&gt;
+        </pre>
+        </code>
+        </p>
+
+        <hr>
+        <li> How can image repetition of the backup be controlled? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li class="inlineList"> To control the repetition of an image in the background, use the background-repeat
+                property.</li>
+            <li class="inlineList"> If we want only horizontally repeat so we can use - "repeat-x"</li>
+            <li class="inlineList"> If we want only vertically repeat so we can use - "repeat-y"</li>
+            <li class="inlineList"> We can use no-repeat value for the background-repeat property if we do not want to
+                repeat an image vertically or horizontally,</li>
+            <li class="inlineList"> In this case, the image will display only once.</li>
+        </ul>
+        <h4>lets see how to code it:-</h4>
+        <ol>
+            <li>In below example we are set "background-repeat: no-repeat;" to whole body</li>
+
+            <code>
+                <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    body{
+                        background-image:url(Image.jpg)
+                        background-repeat: no-repeat;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </code>
+            <li>In below example we are set "background-repeat: repeat-x;" to whole body</li>
+
+            <code>
+                <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    body{
+                        background-image:url(Image.jpg)
+                        background-repeat: repeat-x;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </code>
+            <li>In below example we are set "background-repeat: repeat-y;" to whole body</li>
+
+            <code>
+                <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    body{
+                        background-image:url(Image.jpg)
+                        background-repeat: repeat-y;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </code>
+        </ol>
+        </p>
+
+        <hr>
+        <li> What is the use of the background-position property? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li class="inlineList">A position defines an x/y coordinate, to place an item relative to the edges of an
+                element's box.</li>
+            <li class="inlineList">It can be defined using one to four values.</li>
+            <li class="inlineList">If two non-keyword values are used, the first value represents the horizontal
+                position and the second represents the vertical position.</li>
+            <li class="inlineList">If only one value is specified, the second value is assumed to be center.</li>
+            <li class="inlineList">If three or four values are used, the length-percentage values are offsets for the
+                preceding keyword value(s).</li>
+        </ul>
+        </p>
+
+        <hr>
+        <li> Which property controls the image scroll in the background? </li>
+
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li class="inlineList">The background-attachment property in CSS is used to specify the kind of attachment
+                of the background image with respect to its container.</li>
+            <li class="inlineList">It can be set to scroll or make it remain fixed. It can be applied to all HTML
+                elements.</li>
+        </ul>
+        </p>
+
+        <hr>
+        <li> Why should background and color be used as separate properties? </li>
+
+        <p><Strong>Answer :- </Strong>
+            <h4 class="inlineList"> This is done for two reasons:-</h4>
+            <ol>
+            <li class="inlineList"> It makes style sheets easier to read. </li>
+            <li class="inlineList"> When combined with color, the CSS background property becomes even more complex.</li>
+            </ol>
+        </p>
+
+        <hr>
+        <li> How to center block elements using CSS1? </li>
+
+        <p><Strong>Answer :- </Strong>
+            <h4 class="inlineList"> There are two steps to center a block-level element :- </h4>
+            <ul>
+           <li class="inlineList"> <b> Step 1: </b> Define the external width - We need to define the external width. Block-level elements have the default width of 100% of the webpage, so for centering the block element, we need space around it. So for generating the space, we are giving it a width.</li>
+           <br>
+           <li class="inlineList"> <b> Step 2: </b> Set the left-margin and the right-margin of the element to auto - Since we produced a remaining space by providing external width so now we need to align that space properly that's why we should use margin property. Margin is a property that tells how to align a remaining space. So for centering the element you must set left-margin to auto and right-margin to auto.</li>
+        </ul>
+        </p>
+
+        <hr>
+        <li> How to maintain the CSS specifications? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What are the ways to integrate CSS as a web page? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What is embedded style sheets? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What are the external style sheets? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What are the advantages and disadvantages of using external style sheets? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What is the meaning of the CSS selector? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What are the media types allowed by CSS? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        <hr>
+        <li> What is the rule set? </li>
+
+        <p><Strong>Answer :- </Strong></p>
+
+        
+    </ol>
 </body>
+
 </html>
