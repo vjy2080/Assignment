@@ -1,4 +1,4 @@
-h1,
+header>h1,
 h2 {
     text-align: center;
     color: rgb(177, 16, 16);
@@ -14,13 +14,19 @@ header>h3 {
 
 strong {
     color: rgb(49, 73, 2);
-    font-size: 23px;
+    font-size: 23px;    
+}
+
+.note{
+    color: red;
 }
 
 body {
+    padding: 30px;
     background: rgb(244, 202, 112);
     background: linear-gradient(0deg, rgba(244, 202, 112, 1) 0%, rgba(173, 238, 147, 1) 25%, rgba(141, 240, 231, 1) 50%, rgba(173, 238, 147, 1) 75%, rgba(244, 202, 112, 1) 100%);
     border: 10px solid rgb(2, 83, 70);
+    line-height: 2rem;
 }
 
 .hr {
@@ -37,7 +43,8 @@ p {
     font-size: 20px;
     color: blue;
 }
-b{
+
+b {
     font-size: 22px;
     color: blue;
 }
@@ -51,25 +58,22 @@ b{
 }
 
 img {
-    margin-left: 90px;
+    margin-left: 100px;
     width: 600px;
     height: 300px;
 }
 
 th,
 td {
-
-    padding: 10px;
-    border: 5px groove orange;
-    background-color: rgba(0, 0, 0, 0.079);
+    font-size: larger;
+    padding: 5px;
+    color: black;
+    border: 5px groove rgb(3, 60, 56);
+    background-color: rgba(255, 255, 255, 0.079);
 }
 
 table {
+    border-collapse:collapse;
     color: blue;
-
-}
-
-.fntgrn {
-    color: rgb(8, 86, 4);
 
 }
