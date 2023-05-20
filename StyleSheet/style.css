@@ -13,8 +13,9 @@ header>h3 {
 }
 
 strong {
-    color: rgb(49, 73, 2);
-    font-size: 23px;    
+    color: green;
+    font-size: 25px;
+    text-decoration: underline;    
 }
 
 .note{
@@ -49,12 +50,19 @@ b {
     color: blue;
 }
 
-
-
-ul>li, {
+h4{
+    font-size: 20px;
+    color: brown;
+    font-weight: normal;
+}
+ul>li,p~ol>li {
     font-size: 20px;
     color: blue;
     font-weight: normal;
+}
+
+code{
+    font-size: 1rem;
 }
 
 img {
