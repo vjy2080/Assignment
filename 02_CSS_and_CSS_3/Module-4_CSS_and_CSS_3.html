@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module-4_CSS_and_CSS_3</title>
-    <link rel="stylesheet" href="../01_WD-HTML/StyleSheet/Module_1(HTML).css" class="style">
+    <link rel="stylesheet" href="../StyleSheet/style.css" class="style">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <li class="inlineList">It is less complex therefore the effort are significantly reduced.</li>
             <li class="inlineList">It helps to form spontaneous and consistent changes.</li>
             <li class="inlineList">CSS changes are device friendly. With people employing a batch of various
-                range of smart devices to access websites over the web, there’s a requirement for responsive web
+                range of smart devices to access websites over the web, there's a requirement for responsive web
                 design.</li>
             <li class="inlineList">It has the power for re-positioning. It helps us to determine the changes
                 within the position of web elements who are there on the page.</li>
@@ -297,66 +297,167 @@
         <li> Why should background and color be used as separate properties? </li>
 
         <p><Strong>Answer :- </Strong>
-            <h4 class="inlineList"> This is done for two reasons:-</h4>
-            <ol>
+        <h4 class="inlineList"> This is done for two reasons:-</h4>
+        <ol>
             <li class="inlineList"> It makes style sheets easier to read. </li>
-            <li class="inlineList"> When combined with color, the CSS background property becomes even more complex.</li>
-            </ol>
+            <li class="inlineList"> When combined with color, the CSS background property becomes even more complex.
+            </li>
+        </ol>
         </p>
 
         <hr>
         <li> How to center block elements using CSS1? </li>
 
         <p><Strong>Answer :- </Strong>
-            <h4 class="inlineList"> There are two steps to center a block-level element :- </h4>
-            <ul>
-           <li class="inlineList"> <b> Step 1: </b> Define the external width - We need to define the external width. Block-level elements have the default width of 100% of the webpage, so for centering the block element, we need space around it. So for generating the space, we are giving it a width.</li>
-           <br>
-           <li class="inlineList"> <b> Step 2: </b> Set the left-margin and the right-margin of the element to auto - Since we produced a remaining space by providing external width so now we need to align that space properly that's why we should use margin property. Margin is a property that tells how to align a remaining space. So for centering the element you must set left-margin to auto and right-margin to auto.</li>
+        <h4 class="inlineList"> There are two steps to center a block-level element :- </h4>
+        <ul>
+            <li class="inlineList"> <b> Step 1: </b> Define the external width - We need to define the external width.
+                Block-level elements have the default width of 100% of the webpage, so for centering the block element,
+                we need space around it. So for generating the space, we are giving it a width.</li>
+            <br>
+            <li class="inlineList"> <b> Step 2: </b> Set the left-margin and the right-margin of the element to auto -
+                Since we produced a remaining space by providing external width so now we need to align that space
+                properly that's why we should use margin property. Margin is a property that tells how to align a
+                remaining space. So for centering the element you must set left-margin to auto and right-margin to auto.
+            </li>
         </ul>
         </p>
 
         <hr>
         <li> How to maintain the CSS specifications? </li>
-
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <h4 class="inlineList">These simple rules will make our system effectively maintain and scale.</h4>
+        <ol>
+            <li class="inlineList"> Keep all global styles in a separate file.</li>
+            <li class="inlineList"> Keep styles of components(pages, layouts) in isolation all the time.</li>
+            <li class="inlineList"> Keep the same name across the javascript file name, component name, style file name,
+                and style class name.</li>
+        </ol>
+        </p>
 
         <hr>
         <li> What are the ways to integrate CSS as a web page? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <h4 class="inlineList">To integrate CSS on a web page, you have 3 options:</h4>
+        <ol>
+            <li class="inlineList"> Inline CSS: You can add CSS styles directly to an HTML element using the "style"
+                attribute.</li>
+            <li class="inlineList"> Internal CSS: You can add CSS styles to the head section of an HTML document using
+                the "style" tag.
+            </li>
+            <li class="inlineList"> External CSS: You can create a separate CSS file and link it to your HTML document
+                using the "link" tag
+                in the head section.</li>
+        </ol>
+        </p>
 
         <hr>
         <li> What is embedded style sheets? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li>Internal CSS is called as embedded style sheet</li>
+            <li>The CSS syntax for embedded style sheets is exactly the same as other CSS code.</li>
+
+            <pre>
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+            We can write our CSS here as "Embedded style sheet"
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;                
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+
+        </ul>
+        </p>
 
         <hr>
         <li> What are the external style sheets? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <ul>
+            <li> External CSS contains separate CSS files that contain only style properties with the help of tag
+                attributes (For example class, id, heading, … etc).</li>
+            <li> CSS property is written in a separate file with a .css extension and should be linked to the HTML
+                document using a link tag.</li>
+            <li> It means that, for each element, style can be set only once and will be applied across web pages.</li>
+        </ul>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt; link rel="stylesheet" href="style.css" class="style" &gt;
+            &lt;/head&gt;
+            &lt;body&gt;                
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </p>
 
         <hr>
         <li> What are the advantages and disadvantages of using external style sheets? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <h4> The advantages of External Style Sheets are:</h4>
+        <ol>
+            <li>Using them, the styles of multiple documents can be controlled from one file.</li>
+            <li>Classes can be created for use on multiple HTML element types in many documents.</li>
+            <li>In complex situations, selector and grouping methods can be used to apply styles.</li>
+        </ol>
+
+        <h4> The disadvantages of External Style Sheets are:</h4>
+        <ol>
+            <li>In order to import style information for each document, an extra download is needed.</li>
+            <li>Until the external style sheet is loaded, it may not be possible to render the document.</li>
+            <li>For small number of style definitions, it is not viable.</li>
+        </ol>
+        </p>
 
         <hr>
         <li> What is the meaning of the CSS selector? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+            <ul>
+               <li> A CSS selector is the first part of a CSS Rule.</li>
+               <li> It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.</li>
+               <li> The element or elements which are selected by the selector are referred to as the subject of the selector.</li>
+
+            </ul>
+        </p>
 
         <hr>
         <li> What are the media types allowed by CSS? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+
+           <h4> Media types describe the general category of a device.</h4>
+           <h4> Except when using the not or only logical operators, the media type is optional and the all type is implied.</h4>
+            <ul>
+          <li> <b> All :- </b> Suitable for all devices.</li>
+          <li> <b> Print :- </b> Intended for paged material and documents viewed on a screen in print preview mode.</li>
+          <li> <b> Screen :- </b> Intended primarily for screens.</li>
+        </ul>
+        </p>
 
         <hr>
         <li> What is the rule set? </li>
 
-        <p><Strong>Answer :- </Strong></p>
+        <p><Strong>Answer :- </Strong>
+        <ul>
+           <li> The whole thing is a ruleset.</li>
+           <li> The curly braces and everything inside is a declaration block.</li>
+           <li> The bit before the opening curly brace is a selector.</li>
+           <li> Each key/value pair, as separated by a colon and ending in a semicolon, is a declaration.</li>
+           <li> In those key/value pairs, the key is a property (or property name), and the value is a value (or property value).</li>
+           <br><br><br>
+           <li><img src="Images/CSS-Ruleset.png" alt=""></li>
+        </ul>
+        </p>
 
-        
+
     </ol>
 </body>
 
