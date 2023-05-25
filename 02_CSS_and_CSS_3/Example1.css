@@ -21,8 +21,10 @@
 }
 
 .logo {
-    display: inline-block;
-    margin-left: 100px;
+    width: 80px;
+    height: 25px;
+    margin-left: 120px;
+    /* margin-top: 10px; */
 }
 
 /* .nav>img {
@@ -35,12 +37,13 @@
     display: flex;
     justify-content: space-around;
     font-size: x-small;
+    margin-top: 20px;
 }
 
 nav {
-    align-content: center;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     width: 50%;
     justify-content: space-between;
     text-transform: uppercase;
@@ -49,11 +52,12 @@ nav {
 nav>a {
     text-decoration: none;
     color: white;
+    padding-bottom: 10px;
 }
 
 nav>a:hover {
     color: orangered;
-    font-size: 12px;
+    border-bottom: 2px solid orangered;
 }
 
 .content {
@@ -82,10 +86,10 @@ h2 {
 
 hr {
     border-style: solid;
-    border-width: 5px;
-    border-image: url(Images/Design.png) 15;
+    border-width: 3px;
+    border-image: url(Images/Design.png) 4;
     height: 0px;
-    width: 10%;
+    width: 14%;
 }
 
 .btn {
@@ -125,3 +129,13 @@ p {
     width: 60%;
     line-height: 20px;
 }
+.anchor-logo{
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: -80px;
+}
+
+.detail>img{}
+.detail>h4{}
+.detail>p{}
