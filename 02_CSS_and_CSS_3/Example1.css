@@ -58,6 +58,7 @@ nav>a {
 nav>a:hover {
     color: orangered;
     border-bottom: 2px solid orangered;
+    /* outline: auto;    */
 }
 
 .content {
