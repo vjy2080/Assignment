@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     background-image: url(Images/bg.png);
@@ -14,47 +14,95 @@
     width: 100vw;
     height: 100vh;
 }
-div[class*=img]{ display: inline-block;
-position: absolute;}
 
-img{
-    width: 51.5px;
-    height: 51.5px;
+.text h2{
+    border: 2px solid white;
+    position: absolute;
+    text-align: center;
+}
+.text p{
+    position: absolute;
+    text-align: center;
+
+}
+
+div[class*=img] {
+    display: inline-block;
+    position: absolute;
+    border: 3px solid orangered;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+div[class*=img]>h3 {
+    width: 9rem;
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -50px;
+    /* display: none; */
+}
+
+div[class*=img]>p {
     
+        width: 9rem;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Source Sans Pro";
+    text-align: center;
+    margin-left: -50px;
+    /* display: none; */
 }
+
+
+
+
+div[class*=img]:hover {
+    scale: 1.2;
+    border: 3px solid orangered;
+    background-color: #e74c3c;
+    opacity: 0.8;
+}
+
+img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+}
+
 .img1 {
-    border: 2px solid orangered;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    top: 482px;
+    left: 192px;
 }
+
 .img2 {
-    border: 2px solid orangered;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    top: 10px;
-    left: 10px;
+    top: 438px;
+    left: 451px;
 }
+
 .img3 {
-    border: 2px solid orangered;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    top: 462px;
+    left: 645px;
 }
+
 .img4 {
-    border: 2px solid orangered;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    top: 497px;
+    left: 877px;
+
 }
+
 .img5 {
-    border: 2px solid orangered;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    top: 497px;
+    left: 1093px;
 }
-svg{
-   
+
+svg {
+    border: 2px solid white;
+    padding-top: 400px;
 }
