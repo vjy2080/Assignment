@@ -3,80 +3,122 @@
     padding: 0;
     box-sizing: border-box;
 }
+.blackbg{
+    background-color: rgba(0, 0, 0, 0.749);
+    position: absolute;
+    z-index: -1;
 
-.container {
-    display: flex;
-    justify-content: space-between;
+}
+.bg{
     background-image: url(Images/bg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    position: absolute;
+    z-index: -10;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+   
 }
 
-.text h2{
-    border: 2px solid white;
+.row {
+    width: 100vw;
+    height: 100px;
+    padding-top: 200px;
+    
+}
+
+svg {
+    padding-top: 150px;
     position: absolute;
+    z-index: 1;
+}
+
+.text {
+    color: white;
+}
+.text h2:hover{
+    color: orangered;
+}
+
+.text h2 {
     text-align: center;
 }
-.text p{
-    position: absolute;
+
+.text p {
     text-align: center;
 
 }
 
 div[class*=img] {
-    display: inline-block;
+    display: flex;
     position: absolute;
-    border: 3px solid orangered;
-    border-radius: 50%;
-    width: 50px;
+    z-index: 10;
+    width: 155px;
     height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 div[class*=img]>h3 {
     width: 9rem;
     font-size: 18px;
-    color: #e74c3c;
     font-weight: 600;
     font-family: "Open Sans";
     text-align: center;
     margin-top: 50px;
     margin-left: -50px;
-    /* display: none; */
+
 }
 
-div[class*=img]>p {
-    
-        width: 9rem;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "Source Sans Pro";
-    text-align: center;
-    margin-left: -50px;
-    /* display: none; */
+.content{
+    visibility: hidden;
+    width: 155px;
+    margin-top: 50px;
+
 }
 
 
 
-
-div[class*=img]:hover {
+img:hover {
     scale: 1.2;
-    border: 3px solid orangered;
     background-color: #e74c3c;
     opacity: 0.8;
+    visibility: visible;
+    
+}
+img:hover +.content {
+    opacity: 0.8;
+    visibility: visible;
+    color: #e74c3c;
+    
+  
+}
+
+
+img:hover +.content>p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+
 }
 
 img {
     width: 46px;
     height: 46px;
     border-radius: 50%;
+    border: 5px solid orangered;
 
 }
 
 .img1 {
+    
     top: 482px;
     left: 192px;
 }
@@ -102,7 +144,3 @@ img {
     left: 1093px;
 }
 
-svg {
-    border: 2px solid white;
-    padding-top: 400px;
-}
