@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password field with show hide functionalities</title>
+</head>
+<body>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button id="toggleBtn" onclick="togglePasswordVisibility()">Show</button>
+</body>
+</html>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var toggleBtn = document.getElementById("toggleBtn");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleBtn.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                toggleBtn.textContent = "Show";
+            }
+        }
+    </script>
+</html>
