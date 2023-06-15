@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password field with show hide functionalities</title>
+    <title>Example 1 Show Password function</title>
+    <style>
+        #btn{
+            height: 15px;
+        }
+    </style>
 </head>
 <body>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-    <button id="toggleBtn" onclick="togglePasswordVisibility()">Show</button>
-</body>
-</html>
-    <script>
-        function togglePasswordVisibility() {
-            var passwordField = document.getElementById("password");
-            var toggleBtn = document.getElementById("toggleBtn");
+    <label for="password">Enter Password : </label>
+    <input type="password" name="password" id="password">
+   <div>
+       <button id="btn" onclick="togglepw()" ></button>
+       <label for="btn">show password</label>
+   </div>
+   <script>
 
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-                toggleBtn.textContent = "Hide";
-            } else {
-                passwordField.type = "password";
-                toggleBtn.textContent = "Show";
-            }
+       function togglepw() {
+        let showpw = document.getElementById("password")
+        if (showpw.type === "password") {
+            showpw.type = "text";
         }
-    </script>
+}
+   </script>
+</body>
 </html>
