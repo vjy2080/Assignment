@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example 3 Create result</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: rgb(156, 189, 172);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: xx-large;
+      /* width: 50%; */
+    }
+
+    section {
+      border: 2px solid;
+      display: block;
+      margin: auto;
+    }
+
+    .row {
+      /* border: 2px solid red; */
+      width: 50%;
+      margin: auto;
+
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 15px 0px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #9ad9f0;
+    }
+
+    #total,
+    #percentage {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      color: blue;
+      /* width: 50%; */
+
+    }
+
+    #result {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      color: rgb(19, 44, 19);
+      /* width: 50%; */
+    }
+
+
+    button {
+      background-color: skyblue;
+      padding: 10px 50px;
+      display: block;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .display {
+        display: flex;
+        justify-content: space-between;
+     
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="row">
+      <h1>Marksheet for Information Technology</h1>
+      <table>
+        <tr>
+          <th></th>
+          <th>Enter Marks</th>
+        </tr>
+        <tr>
+          <td>C Language</td>
+          <td><input type="text" id="C_Language" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>C++ Language</td>
+          <td><input type="text" id="C++_Language" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>Database</td>
+          <td><input type="text" id="Database" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><input type="text" id="HTML" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td><input type="text" id="CSS" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>php</td>
+          <td><input type="text" id="php" placeholder="Obtained Marks"></td>
+        </tr>
+        <tr>
+          <td>Core java</td>
+          <td><input type="text" id="Core_java" placeholder="Obtained Marks"></td>
+        </tr>
+      </table>
+      <button onclick="calculateTotal()">Result</button>
+      <div class="display">
+        <div id="total"></div>
+        <div id="percentage"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function calculateTotal() {
+      var C_Language = parseInt(document.getElementById('C_Language').value);
+      var C_Lang  = parseInt(document.getElementById('C++_Language').value);
+      var Database  = parseInt(document.getElementById('Database').value);
+      var HTML  = parseInt(document.getElementById('HTML').value);
+      var CSS  = parseInt(document.getElementById('CSS').value);
+      var php  = parseInt(document.getElementById('php').value);
+      var Core_java  = parseInt(document.getElementById('Core_java').value);
+
+      var totalMarks = C_Language + C_Lang + Database + HTML + CSS + php + Core_java;
+      var percentage = (totalMarks / 350) * 100;
+
+      document.getElementById('total').innerHTML = 'Total is : ' + totalMarks + "/350";
+      document.getElementById('percentage').innerHTML = 'Percentage is : ' + percentage + '%';
+    }
+  </script>
+</body>
+
+</html>
