@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example 2 Basic Math Operation</title>
+    <style>
+        table {
+            border: 2px solid;
+            padding: 20px;
+
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,13 +29,57 @@
         <table>
             <thead>
                 <tr>
-                    <th>
+                    <th colspan="4">
                         Maths Operations
                     </th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3">Enter 1st Number :</td>
+                    <td><input type="number" name="first" id="first"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Enter 2nd Number :</td>
+                    <td><input type="number" name="second" id="second"></td>
+                </tr>
+                <tr>
+                    <td><button>+</button></td>
+                    <td><button>-</button></td>
+                    <td><button>*</button></td>
+                    <td rowspan="2">Answer is : <span></span></td>
+                </tr>
+                <tr>
+                    <td><button>/</button></td>
+                    <td><button>%</button></td>
+                </tr>
+            </tbody>
         </table>
     </section>
+
+    <script>
+        // console.log("called");
+        // let first = parseInt(document.getElementById("first").value)
+        // let second = parseInt(document.getElementById("second").value)
+
+        inputData = document.querySelectorAll('input');
+        // console.log(inputData);
+        console.log("called",this.value)
+
+        inputData.forEach(element => {
+            element.addEventListener("blur", function () {
+                const newDiv = document.createElement("span");
+                const pText = document.createTextNode("This field is required");
+                newDiv.appendChild(pText);
+            })
+        }
+        );
+
+
+
+
+
+    </script>
 </body>
 
 </html>
