@@ -9,7 +9,6 @@
         table {
             border: 2px solid;
             padding: 20px;
-
         }
 
         th,
@@ -20,6 +19,11 @@
 
         button {
             width: 30px;
+        }
+
+        #result > span {
+            color: blue;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -44,41 +48,47 @@
                     <td><input type="number" name="second" id="second"></td>
                 </tr>
                 <tr>
-                    <td><button>+</button></td>
-                    <td><button>-</button></td>
-                    <td><button>*</button></td>
-                    <td rowspan="2">Answer is : <span></span></td>
+                    <td><button onclick="cal('+')">+</button></td>
+                    <td><button onclick="cal('-')">-</button></td>
+                    <td><button onclick="cal('*')">*</button></td>
+                    <td rowspan="2" id="result">Answer is :</td>
                 </tr>
                 <tr>
-                    <td><button>/</button></td>
-                    <td><button>%</button></td>
+                    <td><button onclick="cal('/')">/</button></td>
+                    <td><button onclick="cal('%')">%</button></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <script>
-        // console.log("called");
-        // let first = parseInt(document.getElementById("first").value)
-        // let second = parseInt(document.getElementById("second").value)
+        function cal(operator) {
+            let first = parseInt(document.getElementById("first").value);
+            let second = parseInt(document.getElementById("second").value);
+            let result;
 
-        inputData = document.querySelectorAll('input');
-        // console.log(inputData);
-        console.log("called",this.value)
+            switch (operator) {
+                case '+':
+                    result = first + second;
+                    break;
+                case '-':
+                    result = first - second;
+                    break;
+                case '*':
+                    result = first * second;
+                    break;
+                case '/':
+                    result = first / second;
+                    break;
+                case '%':
+                    result = first % second;
+                    break;
+                default:
+                    return;
+            }
 
-        inputData.forEach(element => {
-            element.addEventListener("blur", function () {
-                const newDiv = document.createElement("span");
-                const pText = document.createTextNode("This field is required");
-                newDiv.appendChild(pText);
-            })
+            document.getElementById("result").innerHTML = "Answer is : <span>" + result + "</span>";
         }
-        );
-
-
-
-
-
     </script>
 </body>
 
