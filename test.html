@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example 3 Create result</title>
+  <title>test</title>
   <style>
     body {
       font-family: sans-serif;
@@ -17,7 +17,6 @@
     h1 {
       text-align: center;
       font-size: xx-large;
-      /* width: 50%; */
     }
 
     section {
@@ -27,7 +26,6 @@
     }
 
     .row {
-      /* border: 2px solid red; */
       width: 50%;
       margin: auto;
 
@@ -56,7 +54,6 @@
       text-align: center;
       margin-top: 20px;
       color: blue;
-      /* width: 50%; */
 
     }
 
@@ -66,7 +63,6 @@
       text-align: center;
       margin-top: 20px;
       color: rgb(19, 44, 19);
-      /* width: 50%; */
     }
 
 
@@ -132,26 +128,26 @@
     </div>
   </section>
   <script>
-    function calculateTotal() {
-        
-        let inputData = document.querySelectorAll("input") ;
-            let totalMarks = 0;
-            inputData.forEach(input => {
-                let value = parseInt(input.value);
-                if (value > 50) {
-                    alert('Marks is not be greater than "50".')
-                }
-                if (!isNaN(value)) {
-                    totalMarks += value;
-                }
-                let prcntg = (totalMarks / 350) * 100;
-                let percentage = prcntg.toPrecision(4);
-                document.getElementById('total').innerHTML = 'Total is : ' + totalMarks + "/350";
-                document.getElementById('percentage').innerHTML = 'Percentage is : ' + percentage + '%';
-            });
-            }
+function calculateTotal() {
     
-      </script>
+    let inputData = document.querySelectorAll("input") ;
+        let totalMarks = 0;
+        inputData.forEach(input => {
+            let value = parseInt(input.value);
+            if (value > 50) {
+                alert("Marks is not be grater than 50")
+            }
+            if (!isNaN(value)) {
+                totalMarks += value;
+            }
+            let prcntg = (totalMarks / 350) * 100;
+            let percentage = prcntg.toPrecision(4);
+            document.getElementById('total').innerHTML = 'Total is : ' + totalMarks + "/350";
+            document.getElementById('percentage').innerHTML = 'Percentage is : ' + percentage + '%';
+        });
+        }
+
+  </script>
 </body>
 
 </html>
