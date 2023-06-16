@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            background-color: black;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+
+        #slider {
+            display: flex;
+
+        }
+
+
+        .slider_left {
+            position: relative;
+            animation-name: left;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes left {
+            0% {
+                left: 0px;
+            }
+
+            100% {
+                left: 100px;
+            }
+        }
+
+        .slider_right {
+            position: relative;
+            animation-name: right;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-direction: reverse;
+
+        }
+
+        @keyframes right {
+            0% {
+                left: 0px;
+            }
+
+            100% {
+                left: 100px;
+            }
+        }
+
+        div[class*="box"] {
+            width: 100px;
+            height: 100px;
+            padding-left: 10px;
+            position: relative;
+            /* left: 100px; */
+            display: inline-block;
+
+
+        }
+
+        .box1 {
+            background-color: green;
+
+        }
+
+        .box2 {
+            background-color: red;
+        }
+
+        .box3 {
+            background-color: yellow;
+        }
+
+        .box4 {
+            background-color: blue;
+        }
+
+        .box5 {
+            background-color: brown;
+        }
+
+        .effect {
+            background-color: teal;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="slider" class="">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+        </div>
+        <div>
+            <button id="right">🡰</button>
+            <button id="left">🡲</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("left").addEventListener("click", function () {
+
+            let a = document.getElementById("slider").classList.contains("slider_left")
+            if (a) {
+                document.getElementById("slider").classList.remove("slider_left")
+            }
+            else {
+                document.getElementById("slider").classList.add("slider_left")
+            }
+        })
+
+        document.getElementById("right").addEventListener("click", function () {
+
+            let b = document.getElementById("slider").classList.contains("slider_right")
+
+            if (b) {
+                document.getElementById("slider").classList.remove("slider_right")
+            }
+            else {
+                document.getElementById("slider").classList.add("slider_right")
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>
