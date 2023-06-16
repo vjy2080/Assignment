@@ -4,32 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example 4 Create a slider using JavaScript</title>
+    <title>t2</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
-        section {
-            background-color: black;
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin: 50px;
-            padding: 50px;
-            overflow: hidden;
-        }
-
-        p {
-            font-size: small;
-            color: grey;
-        }
-
-
 
         #container {
             background-color: black;
@@ -71,7 +52,7 @@
             background-color: brown;
         }
 
-        #btn {
+        #btn{
 
             margin: 20px auto
         }
@@ -79,23 +60,19 @@
 </head>
 
 <body>
-    <section>
-        <h1>Simple Javascript Slider</h1>
-        <p>Created by Vijay Prajapati</p>
-        <div id="container">
-            <div id="slider">
-                <div class="box1"></div>
-                <div class="box2"></div>
-                <div class="box3"></div>
-                <div class="box4"></div>
-                <div class="box5"></div>
-            </div>
-            <div id="btn">
-                <button id="right">🡰</button>
-                <button id="left">🡲</button>
-            </div>
+    <div id="container">
+        <div id="slider">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
         </div>
-    </section>
+        <div id="btn">
+            <button id="right">🡰</button>
+            <button id="left">🡲</button>
+        </div>
+    </div>
     <script>
         let slider = document.getElementById("slider");
         let currentPosition = 0;
@@ -110,7 +87,6 @@
             slider.style.transform = `translateX(${currentPosition}px)`;
         });
     </script>
-
 </body>
 
 </html>
