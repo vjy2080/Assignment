@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example 4 Create a slider using JavaScript</title>
+
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+
+        }
+        body{
+            background-color: black;
+
         }
 
         section {
@@ -18,62 +24,90 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            margin: 50px;
-            padding: 50px;
             overflow: hidden;
+            margin: auto;
+            padding-top: 50px;
         }
 
         p {
             font-size: small;
             color: grey;
+            padding: 30px 0px;
+
         }
 
 
 
         #container {
             background-color: black;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
+            width: 100vw;
+            padding: 30px 0px;
+            
         }
 
         #slider {
+          
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
             position: relative;
             transition: transform 0.5s ease;
         }
 
-        div[class*="box"] {
+        .box {
             width: 100px;
-            height: 100px;
             margin: 10px;
             position: relative;
         }
 
+
         .box1 {
             background-color: green;
+        }
+
+        #box1 {
+            height: 100px;
         }
 
         .box2 {
             background-color: red;
         }
 
+        #box2 {
+
+            height: 110px;
+        }
+
         .box3 {
             background-color: yellow;
+        }
+
+        #box3 {
+
+            height: 120px;
         }
 
         .box4 {
             background-color: blue;
         }
 
+        #box4 {
+
+            height: 110px;
+        }
+
         .box5 {
             background-color: brown;
         }
 
-        #btn {
+        #box5 {
 
-            margin: 20px auto
+            height: 100px;
+        }
+
+        #btn {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -84,31 +118,49 @@
         <p>Created by Vijay Prajapati</p>
         <div id="container">
             <div id="slider">
-                <div class="box1"></div>
-                <div class="box2"></div>
-                <div class="box3"></div>
-                <div class="box4"></div>
-                <div class="box5"></div>
-            </div>
-            <div id="btn">
-                <button id="right">🡰</button>
-                <button id="left">🡲</button>
+                <div id="box1" class="box1 box"></div>
+                <div id="box2" class="box2 box"></div>
+                <div id="box3" class="box3 box"></div>
+                <div id="box4" class="box4 box"></div>
+                <div id="box5" class="box5 box"></div>
             </div>
         </div>
+        <div id="btn">
+            <button id="right">🡰</button>
+            <button id="left">🡲</button>
+        </div>
     </section>
+
     <script>
-        let slider = document.getElementById("slider");
-        let currentPosition = 0;
+        const slider = document.querySelector ('#slider');
+        const boxes = Array.from(document.querySelectorAll('.box'));
 
-        document.getElementById("left").addEventListener("click", function () {
-            currentPosition -= 100;
-            slider.style.transform = `translateX(${currentPosition}px)`;
-        });
+        const rightButton = document.querySelector('#right');
+        const leftButton = document.querySelector('#left');
 
-        document.getElementById("right").addEventListener("click", function () {
-            currentPosition += 100;
-            slider.style.transform = `translateX(${currentPosition}px)`;
-        });
+        rightButton.addEventListener('click', moveSliderRight);
+        leftButton.addEventListener('click', moveSliderLeft);
+
+        function moveSliderRight() {
+            const lastBox = boxes.pop();
+            boxes.unshift(lastBox);
+
+            updateBoxClasses();
+        }
+
+        function moveSliderLeft() {
+            const firstBox = boxes.shift();
+            boxes.push(firstBox);
+
+            updateBoxClasses();
+        }
+
+        function updateBoxClasses() {
+            boxes.forEach((box, index) => {
+                box.className = `box box${index + 1}`;
+            });
+        }
+
     </script>
 
 </body>
