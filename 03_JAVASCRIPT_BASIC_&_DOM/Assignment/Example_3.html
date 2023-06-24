@@ -127,19 +127,22 @@
       </div>
     </div>
   </section>
-  <script>
+  <!-- <script>
     function calculateTotal() {
         
         let inputData = document.querySelectorAll("input") ;
             let totalMarks = 0;
             inputData.forEach(input => {
                 let value = parseInt(input.value);
-                if (value > 50) {
-                    alert('Marks is not be greater than "50".')
+                if (value > 50 || value < 0) {
+                    alert('Marks is not be greater than "50" and Less than "0".')
                 }
                 if (!isNaN(value)) {
                     totalMarks += value;
                 }
+                if (value === '') {
+    alert('Input field cannot be empty!');
+}
                 let prcntg = (totalMarks / 350) * 100;
                 let percentage = prcntg.toPrecision(4);
                 document.getElementById('total').innerHTML = 'Total is : ' + totalMarks + "/350";
@@ -147,6 +150,37 @@
             });
             }
     
+      </script> -->
+
+      <script>
+        function calculateTotal() {
+    let inputData = document.querySelectorAll("input");
+    let totalMarks = 0;
+    
+    inputData.forEach(input => {
+        let value = parseInt(input.value);
+        
+        if (value > 50 || value < 0) {
+            alert('Marks should not be greater than "50" or less than "0".');
+        }
+        
+        if (isNaN(value)) {
+            alert('Invalid input. Please enter a valid number.');
+        } else {
+            totalMarks += value;
+        }
+    });
+    
+    if (totalMarks === 0) {
+        alert('Input fields cannot be empty!');
+    } else {
+        let prcntg = (totalMarks / 350) * 100;
+        let percentage = prcntg.toPrecision(4);
+        document.getElementById('total').innerHTML = 'Total is : ' + totalMarks + "/350";
+        document.getElementById('percentage').innerHTML = 'Percentage is : ' + percentage + '%';
+    }
+}
+
       </script>
 </body>
 
