@@ -52,7 +52,7 @@
         // div2.addEventListener("click", function (event) {
         //     alert("you clicked on div 2");
         // }, false);
-        var divs = document.getElementsByTagName('div');
+ /*       var divs = document.getElementsByTagName('div');
         console.log(divs);
         for (var i = 0; i < divs.length; i++) {
             divs[i].addEventListener('click',
@@ -61,33 +61,34 @@
                 // console.log("you clicked on div",this.id);
                 alert("you clicked on "+this.id);
             }, false);
+ */
             // }, true);
+        // }
+        var logElement = document.getElementById('log');
+
+        function log(msg) {
+            logElement.innerHTML += ('<p>' + msg + '</p>');
         }
-        // var logElement = document.getElementById('log');
 
-        // function log(msg) {
-        //     logElement.innerHTML += ('<p>' + msg + '</p>');
-        // }
+        function capture() {
+            log('capture: ' + this.firstChild.nodeValue.trim());
+        }
 
-        // function capture() {
-        //     log('capture: ' + this.firstChild.nodeValue.trim());
-        // }
+        function bubble() {
+            log('bubble: ' + this.firstChild.nodeValue.trim());
+        }
 
-        // function bubble() {
-        //     log('bubble: ' + this.firstChild.nodeValue.trim());
-        // }
+        function clearOutput() {
+            logElement.innerHTML = "";
+        }
 
-        // function clearOutput() {
-        //     logElement.innerHTML = "";
-        // }
-
-        // var divs = document.getElementsByTagName('div');
-        // for (var i = 0; i < divs.length; i++) {
-        //     divs[i].addEventListener('click', capture, true);
-        //     divs[i].addEventListener('click', bubble, false);
-        // }
-        // var clearButton = document.getElementById('clear');
-        // clearButton.addEventListener('click', clearOutput);
+        var divs = document.getElementsByTagName('div');
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].addEventListener('click', capture, true);
+            divs[i].addEventListener('click', bubble, false);
+        }
+        var clearButton = document.getElementById('clear');
+        clearButton.addEventListener('click', clearOutput);
     </script>
 
 </body>

@@ -6,9 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        section {
             border: 2px solid red;
             padding: 10px;
+            cursor: pointer;
+
+        }
+
+        ul {
+
+            list-style: none;
+        }
+
+        span {
+            padding: 0px;
+        }
+
+        div,
+        ul,
+        li {
+            padding: 10px;
+            background: #fff;
+            border: 2px solid red;
+        }
+
+        div:hover,
+        ul:hover,
+        li:hover {
+            border: 1px solid #faa;
+            background: #fdd;
+        }
+        #log{
+            border: 2px solid green;
+            color: green;
         }
     </style>
 </head>
@@ -18,16 +48,50 @@
     </h2>
     <section>
         <div>body (great-great-grandparent)
-            <div>div(great-grandparent)</div>
-            <ul>ul(grandparent)
-                <li>li(direct parent)
-                    <span>span</span>
-                </li>
-            </ul>
+            <div>div(great-grandparent)
+                <div>ul(grandparent)
+                    <div> li(direct parent)
+                        <div>span</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <br><button id="clear">clear output</button>
+    <br><br><section id="log"> Result</section>
 
+
+    <script>
+
+        var logElement = document.getElementById('log');
+
+        function log(msg) {
+            logElement.innerHTML += ('<p>' + msg + '</p>');
+        }
+
+        function capture() {
+            log('capture: ' + this.firstChild.nodeValue.trim());
+        }
+
+        function bubble() {
+            log('bubble: ' + this.firstChild.nodeValue.trim());
+        }
+
+        function clearOutput() {
+            logElement.innerHTML = "";
+        }
+
+        var divs = document.getElementsByTagName('div');
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].addEventListener('click', capture, true);
+            divs[i].addEventListener('click', bubble, false);
+
+        }
+        var clearButton = document.getElementById('clear');
+        clearButton.addEventListener('click', clearOutput);
+
+    </script>
 
 </body>
 
