@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            line-height: 0;
+        }
+
+        div {
+            display: inline-block;
+            padding: 5px;
+
+            background: #fff;
+            border: 1px solid #aaa;
+            cursor: pointer;
+        }
+
+        div:hover {
+            border: 1px solid #faa;
+            background: #fdd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1" id="div1">1
+        <div class="div2" id="div2">2
+            <div class="div3" id="div3">3
+                <div class="div4" id="div4">4
+                    <div class="div5" id="div5">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="clear">clear output</button>
+    <section id="log"></section>
+
+    <script>
+        // var div1 = document.querySelector("#div1");
+        // var div2 = document.querySelector("#div2");
+        // var div3 = document.querySelector("#div3");
+
+        // div1.addEventListener("click", function (event) {
+        //     alert("you clicked on div 1");
+        // }, false);
+
+        // div2.addEventListener("click", function (event) {
+        //     alert("you clicked on div 2");
+        // }, false);
+        var divs = document.getElementsByTagName('div');
+        console.log(divs);
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].addEventListener('click',
+            function (event) {
+                event.stopPropagation();
+                // console.log("you clicked on div",this.id);
+                alert("you clicked on "+this.id);
+            }, false);
+            // }, true);
+        }
+        // var logElement = document.getElementById('log');
+
+        // function log(msg) {
+        //     logElement.innerHTML += ('<p>' + msg + '</p>');
+        // }
+
+        // function capture() {
+        //     log('capture: ' + this.firstChild.nodeValue.trim());
+        // }
+
+        // function bubble() {
+        //     log('bubble: ' + this.firstChild.nodeValue.trim());
+        // }
+
+        // function clearOutput() {
+        //     logElement.innerHTML = "";
+        // }
+
+        // var divs = document.getElementsByTagName('div');
+        // for (var i = 0; i < divs.length; i++) {
+        //     divs[i].addEventListener('click', capture, true);
+        //     divs[i].addEventListener('click', bubble, false);
+        // }
+        // var clearButton = document.getElementById('clear');
+        // clearButton.addEventListener('click', clearOutput);
+    </script>
+
+</body>
+
+</html>

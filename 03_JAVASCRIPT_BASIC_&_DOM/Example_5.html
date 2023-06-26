@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            border: 2px solid red;
+            padding: 10px;
+        }
+    </style>
 </head>
+
 <body>
-<h2>Event bubbling tickling example
-</h2>
+    <h2>Event bubbling tickling example
+    </h2>
+    <section>
+        <div>body (great-great-grandparent)
+            <div>div(great-grandparent)</div>
+            <ul>ul(grandparent)
+                <li>li(direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 
 
 </body>
+
 </html>
