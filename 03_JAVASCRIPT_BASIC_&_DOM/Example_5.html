@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event bubbling tickling example</title>
     <style>
         section {
             border: 2px solid red;
             padding: 10px;
             cursor: pointer;
-
+            color: red;
         }
 
         ul {
-
             list-style: none;
         }
 
@@ -36,10 +35,25 @@
             border: 1px solid #faa;
             background: #fdd;
         }
+
         #log{
             border: 2px solid green;
             color: green;
         }
+        button{
+            background-color: black;
+            color: orange;
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 2px solid orange;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: orange;
+            color: black;
+        }
+
     </style>
 </head>
 
@@ -58,35 +72,29 @@
         </div>
     </section>
 
-    <br><button id="clear">clear output</button>
+    <br><button id="clear">Clear Output</button>
     <br><br><section id="log"> Result</section>
 
 
     <script>
 
         var logElement = document.getElementById('log');
-
         function log(msg) {
             logElement.innerHTML += ('<p>' + msg + '</p>');
         }
-
         function capture() {
             log('capture: ' + this.firstChild.nodeValue.trim());
         }
-
         function bubble() {
             log('bubble: ' + this.firstChild.nodeValue.trim());
         }
-
         function clearOutput() {
             logElement.innerHTML = "";
         }
-
         var divs = document.getElementsByTagName('div');
         for (var i = 0; i < divs.length; i++) {
             divs[i].addEventListener('click', capture, true);
             divs[i].addEventListener('click', bubble, false);
-
         }
         var clearButton = document.getElementById('clear');
         clearButton.addEventListener('click', clearOutput);
