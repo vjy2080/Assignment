@@ -21,12 +21,24 @@
                 ask("Do you agree?", function()
                 { alert("You agreed."); }, function() {
                 alert("You canceled the execution."); }
-                }
+                )
         </code></pre>
-        <!-- <P class="text-center">Output of this code is <b> 2 </b> as an alert.</P> -->
+<p class="text-center">This function say's "Do you agree?" , <br> if you click on ok then it will be consoder "YES" and show massage "You agreed.",<br> else you click "Cancel" them it will be consoder "NO" and show massage "You canceled the execution."</p>
     </div>
     <script>
 
+let yes = confirm("Do you agree?");
+
+ask = () => {
+    console.log(yes);
+    if (yes == true) {
+        alert("You agreed.");
+    } else {
+        alert("You canceled the execution.");
+    }
+}
+
+ask()
     </script>
 </body>
 
