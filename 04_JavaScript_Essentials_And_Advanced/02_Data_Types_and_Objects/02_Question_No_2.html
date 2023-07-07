@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_1</title>
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css">
+</head>
+<body>
+   <div class="hw-100">
+    <h2> Question No.2 <br> Is array copied?<br>
+        let fruits = ["Apples", "Pear", "Orange"];  <br> 
+        // push a new value into the "copy" let shoppingCart = fruits; <br> shoppingCart.push("Banana");<br> // what's in fruits?
+        alert( fruits.length ); // ? </h2>
+    
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+        
+        <p class="text-center"> fruits.length => "4"  </p>
+        <p class="text-center"> fruits => ['Apples', 'Pear', 'Orange', 'Banana'] </p>
+        <p class="text-center"> shoppingCart.length => "4"  </p>
+        <p class="text-center"> shoppingCart => ['Apples', 'Pear', 'Orange', 'Banana'] </p>
+        </div>
+        <script>
+        
+        // Create an Array fruits
+
+        let fruits = ["Apples", "Pear", "Orange"];
+        
+        // Create a copy of an Array as a shoppingCart 
+
+        let shoppingCart = fruits;
+
+        // push a new value into the "shoppingCart" a "Banana"
+
+        shoppingCart.push("Banana");
+
+
+        console.log(fruits);
+
+        console.log(shoppingCart);
+        console.log(shoppingCart.length);
+
+
+        alert( fruits.length ); 
+        
+    </script>
+</body>
+</html>
