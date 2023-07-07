@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressions in console</title>
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css">
+</head>
+
+<body>
+
+<h2>  Question No.2 - What will be the result for these expressions?</h2>
+
+    <ol>
+        <li> 5 > 4 </li>
+        <p> We will get a boolean value is a "true" </p>
+        <li> "apple" > "pineapple" </li>
+        <p> We will get a boolean value is a "false" </p>
+        <li> "2" > "12" </li>
+        <p> We will get a boolean value is a "true" </p>
+        <li> undefined == null </li>
+        <p> We will get a boolean value is a "true" </p>
+        <li> undefined === null </li>
+        <p> We will get a boolean value is a "false" </p>
+        <li> null == "\n0\n" </li>
+        <p> We will get a boolean value is a "false" </p>
+        <li> null === +"\n0\n" </li>
+        <p> We will get a boolean value is a "false" </p>
+    </ol>
+
+    <script>
+        /*---- Question no. 1 ----*/
+
+        let q1 = (5 > 4);
+        console.log("Q1 :- " + q1);
+
+        /*---- Question no. 2 ----*/
+
+        let q2 = ("apple" > "pineapple")
+        console.log("Q2 :- " + q2);
+
+        /*---- Question no. 3 ----*/
+
+        let q3 = ("2" > "12")
+        console.log("Q3 :- " + q3);
+
+        /*---- Question no. 4 ----*/
+
+        let q4 = (undefined == null)
+        console.log("Q4 :- " + q4);
+
+        /*---- Question no. 5 ----*/
+
+        let q5 = (undefined === null)
+        console.log("Q5 :- " + q5);
+
+        /*---- Question no. 6 ----*/
+
+        let q6 = (null == "\n0\n")
+        console.log("Q6 :- " + q6);
+
+        /*---- Question no. 7 ----*/
+
+        let q7 = ( null === +"\n0\n")
+        console.log("Q7 :- " + q7);
+
+    </script>
+</body>
+
+</html>
