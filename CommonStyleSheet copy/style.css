@@ -1,0 +1,97 @@
+header>h1,
+h2 {
+    text-align: center;
+    color: rgb(177, 16, 16);
+}
+
+header>h3 {
+    font-style: italic;
+    text-align: right;
+    margin-right: 50px;
+    color: rgb(133, 3, 42);
+    font-size: 30px;
+}
+
+strong {
+    color: green;
+    font-size: 25px;
+    text-decoration: underline;    
+}
+
+.note{
+    color: red;
+}
+
+body {
+    padding: 30px;
+    background: rgb(244, 202, 112);
+    background: linear-gradient(0deg, rgba(244, 202, 112, 1) 0%, rgba(173, 238, 147, 1) 25%, rgba(141, 240, 231, 1) 50%, rgba(173, 238, 147, 1) 75%, rgba(244, 202, 112, 1) 100%);
+    border: 10px solid rgb(2, 83, 70);
+    line-height: 2rem;
+}
+
+.hr {
+    border: 2px solid black;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 20px;
+    color: blue;
+}
+
+b {
+    font-size: 22px;
+    color: blue;
+}
+
+h4{
+    font-size: 20px;
+    color: brown;
+    font-weight: normal;
+}
+ul>li,p~ol>li {
+    font-size: 20px;
+    color: blue;
+    font-weight: normal;
+}
+
+code{
+    font-size: 1rem;
+}
+
+img {
+    margin-left: 100px;
+    width: 600px;
+    height: 300px;
+}
+
+th,
+td {
+    font-size: larger;
+    padding: 5px;
+    color: black;
+    border: 5px groove rgb(3, 60, 56);
+    background-color: rgba(255, 255, 255, 0.079);
+}
+
+table {
+    border-collapse:collapse;
+    color: blue;
+
+}
+
+.hw-100{
+    height: 100vh;
+    width: 100vw;
+}
+
+.text-center{
+    text-align: center;
+}
+    

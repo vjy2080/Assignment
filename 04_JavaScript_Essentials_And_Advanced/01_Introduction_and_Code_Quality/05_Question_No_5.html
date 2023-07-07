@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_5</title>
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css">
+</head>
+
+<body>
+    <div class="hw-100">
+        <h2>
+            The following function returns true if the parameter age is greater than
+            18. <br> Otherwise it asks for a confirmation and returns its result:
+        </h2>
+
+        <pre> <code>
+            function checkAge (age){
+            
+            if (age> 18) { return true; }
+
+            else { // ...return confirm ('did parents allow you?'); }
+
+            }
+        </code></pre>
+        <P class="text-center">Output of this code is <b> 2 </b> as an alert.</P>
+    </div>
+    <script>
+
+        // Here we are get Age of User by prompt
+        let age = prompt()
+        // We are convert the string value into the number
+        age = Number(age)
+        //Now, we are check the number is grater than 18? if "YES" so user will get an alert "True", otherwise user will get confirmation box with text " did parents allow you? " 
+        function checkAge() {
+
+            if (age > 18) { alert("True") ;}
+            
+            else { confirm('did parents allow you?'); }
+        }
+        // Called function checkAge
+        checkAge()
+
+    </script>
+</body>
+
+</html>
