@@ -11,9 +11,9 @@
 <body>
     <div class="hw-100">
         <h2>Question No.7 <br>
-            Turn the object into JSON and back <br>
-            Turn the user into JSON and then <br>
-            read it back into another variable.
+            Turn the object into JSON and <br>
+            back Turn the user into JSON and <br>
+            then read it back into another variable. <br>
             user = { name: "John Smith", age: 35};
         </h2>
 
@@ -21,7 +21,9 @@
         <h3 class="text-center">ANSWER</h3>
 
         <p class="text-center">
-       
+            Convert object in to JSON ==> let userJSON = JSON.stringify(user); <br>
+            Convert back JSON in to user with new variable ==> let newUser = JSON.parse(userJSON); <br>
+            <b>The result is in console, </b> "Please press F12 and goto console".
         </p>
 
 
@@ -29,7 +31,19 @@
 
     <script>
 
-      
+        let user = { name: "John Smith", age: 35 };
+
+        //Convert object in to JSON
+
+        let userJSON = JSON.stringify(user);
+
+        console.log(userJSON);
+
+        //Convert back JSON in to user with new variable
+
+        let newUser = JSON.parse(userJSON);
+
+        console.log(newUser);
 
 
     </script>
