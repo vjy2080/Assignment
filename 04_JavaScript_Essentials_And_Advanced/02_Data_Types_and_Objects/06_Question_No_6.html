@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_6</title>
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css">
+</head>
+
+<body>
+    <div class="hw-100">
+        <h2>Question No.6 <br>
+            Destructuring assignment We have an object: <br>
+            Write the Destructuring assignment that reads: <br><br>
+            a) Name property into the variable name. <br>
+            b) Year's property into the variable age. <br>
+            c) isAdmin property into the variable isAdmin <br>
+            (false, if no such property) <br>
+            d) let user = { name: "John", years: 30}; <br>
+        </h2>
+
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+
+        <p class="text-center">
+        name => John 
+        age => 30
+        isAdmin => false    
+        </p>
+
+
+    </div>
+
+    <script>
+
+        let user = { name: "John", years: 30 };
+
+        // Destructuring assignment is follow
+
+        let { name, years: age, isAdmin = false } = user;
+
+        console.log("name => " + name);       // Output: John
+        console.log("age => " + age);         // Output: 30
+        console.log("isAdmin => " + isAdmin); // Output: false
+
+
+    </script>
+</body>
+
+</html>
