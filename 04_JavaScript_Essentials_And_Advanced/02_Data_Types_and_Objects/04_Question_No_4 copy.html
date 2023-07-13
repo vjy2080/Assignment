@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_4</title>
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css">
+</head>
+
+<body>
+    <div class="hw-100">
+        <h2>Question No.4 <br>
+            Map to objects <br>
+            let john = { name: "John", surname: "Smith", id: 1 }; <br>
+            let pete = { name: "Pete", surname: "Hunt", id: 2 }; <br>
+            let mary = { name: "Mary", surname: "Key", id: 3 }; <br>
+            let users = [ john, pete, mary ]; <br>
+            let usersMapped = /* ... your code ... */ <br>
+            usersMapped = [ <br>
+            { fullName: "John Smith", id: 1 },<br>
+            { fullName: "Pete Hunt", id: 2 },<br>
+            { fullName: "Mary Key", id: 3 }<br>
+            ]
+            */ alert( usersMapped[0].id ) // 1 alert( usersMapped[0].fullName ) // John Smith
+        </h2>
+
+        <hr class="hr">
+        <h3 class="text-center">ANSWER</h3>
+        <p class="text-center">
+            let usersMapped = users.map((user, index) => {
+            return { fullName: user.name + " " + user.surname, id: index + 1 };
+            });</p>
+
+        <p class="text-center"> alert( usersMapped[0].id ); <br>
+            and <br>
+            alert( usersMapped[0].fullName ) <br>
+             is shown on startup </p>
+
+
+    </div>
+
+    <script>
+        let john = { name: "John", surname: "Smith", id: 1 };
+        let pete = { name: "Pete", surname: "Hunt", id: 2 };
+        let mary = { name: "Mary", surname: "Key", id: 3 };
+        let users = [john, pete, mary];
+
+        let usersMapped = users.map((user, index) => {
+            return { fullName: user.name + " " + user.surname, id: index + 1 };
+        });
+
+        console.log(usersMapped);
+
+        alert(usersMapped[0].id);
+        alert(usersMapped[0].fullName);
+
+                // alert(names);
+    </script>
+</body>
+
+</html>
