@@ -11,28 +11,53 @@
 <body>
     <div class="hw-100">
         <h2>Question No.5 <br>
-            Sum the properties There is a salaries object with arbitrary number of salaries. Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of loop.If salaries is empty, then the result must be 0.
+            Sum the properties There is a salaries object with arbitrary number of salaries. <br>
+            Write the function sumSalaries(salaries) that returns the sum of all salaries using Object. <br>
+            values and the for..of loop.If salaries is empty, then the result must be 0.
+            <pre>
             let salaries = {
             "John": 100,
             "Pete": 300,
             "Mary": 250
-            };
+            }; </pre>
             alert( sumSalaries(salaries) ); // 650
-         </h2>
+        </h2>
 
         <hr class="hr">
         <h3 class="text-center">ANSWER</h3>
 
-        <p class="text-center"> alert( usersMapped[0].id ); <br>
-            and <br>
-            alert( sumSalaries(salaries) ) <br>
-             is shown on startup </p>
+        <p class="text-center"> 
+            alert( sumSalaries(salaries)) ==> 650, <br>
+            If salaries is empty, then the result must be 0.
+            is shown on startup </p>
 
 
     </div>
 
     <script>
-      
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250,
+        };
+
+        salaries = Object.values(salaries);
+
+        let sum = 0;
+
+        function sumSalaries() {
+            for (const Sum of salaries) {
+                if (Sum === 0) {
+                    return 0;
+                }
+                sum += Sum;
+            }
+            return sum;
+        }
+
+        alert("The result is :- " + sumSalaries(salaries) );
+
     </script>
 </body>
 
