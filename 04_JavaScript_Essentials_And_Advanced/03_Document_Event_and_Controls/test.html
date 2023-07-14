@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    .error-message {
+      color: red;
+      font-size: 14px;
+    }
+    .submission-status {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var phoneNumber = document.forms["myForm"]["phone"].value;
+      var birthdate = document.forms["myForm"]["birthdate"].value;
+      var nameError = document.getElementById("name-error");
+      var emailError = document.getElementById("email-error");
+      var phoneError = document.getElementById("phone-error");
+      var birthdateError = document.getElementById("birthdate-error");
+      var submissionStatus = document.getElementById("submission-status");
+
+      // Clear previous error messages and submission status
+      nameError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+      birthdateError.textContent = "";
+      submissionStatus.textContent = "";
+
+      // Validate name
+      if (name === "") {
+        nameError.textContent = "Please enter your name.";
+        return false;
+      }
+
+      // Validate email
+      if (email === "") {
+        emailError.textContent = "Please enter your email address.";
+        return false;
+      }
+
+      // Validate phone number
+      if (phoneNumber === "") {
+        phoneError.textContent = "Please enter your phone number.";
+        return false;
+      }
+
+      // Validate birthdate
+      if (birthdate === "") {
+        birthdateError.textContent = "Please enter your birthdate.";
+        return false;
+      }
+
+      // Validation successful
+      submissionStatus.textContent = "Submitted successfully!";
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>Form Validation Example</h1>
+ 
+</body>
+</html>
