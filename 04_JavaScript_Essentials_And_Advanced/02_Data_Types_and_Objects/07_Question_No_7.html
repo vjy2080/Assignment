@@ -32,19 +32,21 @@
     <script>
 
         let user = { name: "John Smith", age: 35 };
+        console.log("console.log(user);");
+        console.log(user);
 
         //Convert object in to JSON
 
         let userJSON = JSON.stringify(user);
 
+        console.log("console.log(userJSON);");
         console.log(userJSON);
-
         //Convert back JSON in to user with new variable
 
         let newUser = JSON.parse(userJSON);
 
+        console.log("console.log(newUser);");
         console.log(newUser);
-
 
     </script>
 </body>
