@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prevent Form Submission Example</title>
+</head>
+<body>
+  <form id="myForm" action="/submit-url" method="post">
+    <!-- Your form fields here -->
+    <button type="submit" id="submitButton">Submit</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get a reference to the form and submit button
+      var form = document.getElementById("myForm");
+      var submitButton = document.getElementById("submitButton");
+
+      // Add an event listener to the form submission
+      form.addEventListener("submit", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Perform any additional validation or processing here
+
+        // Manually submit the form using JavaScript if desired
+        // form.submit();
+      });
+
+      // Alternatively, you can add an event listener to the submit button
+      submitButton.addEventListener("click", function(event) {
+        // Prevent the default button click behavior
+        event.preventDefault();
+
+        // Perform any additional validation or processing here
+
+        // Manually submit the form using JavaScript if desired
+        // form.submit();
+      });
+    });
+  </script>
+</body>
+</html>
