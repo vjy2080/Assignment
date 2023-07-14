@@ -4,38 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example 1 Show Password function</title>
+    <title>Question_No_1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
+        
         body {
-            /* display: flex; */
-            /* align-items: center; */
-            /* justify-content: center; */
-            /* flex-direction: column; */
-            /* font-size: 32px; */
-            height: 100vh;
-            /* border: 2px solid red; */
             background: url(https://wallpaperaccess.com/full/3910225.jpg) center/cover;
         }
 
-        /* input {
-            margin: 20px;
-        } */
-
-        /* button {
-            background-color: blue;
-        } */
     </style>
 </head>
 
-<body class="h-100 fs-2 border border-3 border-danger">
+<body class="vh-100 fs-2 border border-3 border-danger">
     <div class="container mt-5">
         <div class="row">
+            <p class="text-center text-dark border border-warning rounded">Question :- Create a program to hide/show the password</p>
             <div class="col  text-center ">
 
-                <label for="password">Enter Password : </label> <br>
-                <input type="password" class="m-10" name="password" id="password">
+                <label for="password" class="my-3 text-info-emphasis">Enter your Password</label> <br>
+                <input type="password" class="my-5 rounded px-3" name="password" id="password">
                 <div id="btn" onclick="togglepw()">
                     <!-- <input type="checkbox" id="btn" onclick="togglepw()"> -->
                     <!-- <button id="btn" onclick="togglepw()" ></button> -->
