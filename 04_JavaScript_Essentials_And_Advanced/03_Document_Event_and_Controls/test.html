@@ -1,50 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_No_7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        
+        body {
+            background: url(https://wallpaperaccess.com/full/3910225.jpg);
+            background-size: cover;
+        }
+
+    </style>
+  
 </head>
 <body>
-  <form name="myForm" onsubmit="return validateForm(event)">
-    <table>
-        <tr>
-            <td><label for="name">Name:</label></td>
-            <td>
-                <input type="text" id="name" name="name" required>
-                <div id="name-error" class="error-message"></div>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="email">Email:</label></td>
-            <td>
-                <input type="email" id="email" name="email" required>
-                <div id="email-error" class="error-message"></div>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="phone">Phone Number:</label></td>
-            <td>
-                <input type="tel" id="phone" name="phone" required>
-                <div id="phone-error" class="error-message"></div>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="birthdate">Birthdate:</label></td>
-            <td>
-                <input type="date" id="birthdate" name="birthdate" required>
-                <div id="birthdate-error" class="error-message"></div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <button class="btn mx-3 btn-success border" type="submit" id="submit-button" onclick="disableButton(this)">Submit</button>
-                <button class="btn mx-3 btn-danger border" type="button" id="reset-button" onclick="resetForm(event); disableButton(this)">Reset</button>
-                <div id="submission-status" class="submission-status"></div>
-            </td>
-        </tr>
-    </table>
-</form>
+<div class="container">
+    <div class="row">
+        <p class="text-center text-dark border border-warning rounded"><b>Question</b> :- Prevent the browser when i click the form submit button</p>
+       
+    </div>
+    <div class="row">
+        <div class="col">
+            <form id="myForm" onsubmit="return validateForm(event)">
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td>
+                            <input type="text" id="name" name="name" required oninput="validateInputs()">
+                            <div id="name-error" class="error-message"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td>
+                            <input type="email" id="email" name="email" required oninput="validateInputs()">
+                            <div id="email-error" class="error-message"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td>
+                            <input type="tel" id="phone" name="phone" required oninput="validateInputs()">
+                            <div id="phone-error" class="error-message"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthdate">Birthdate:</label></td>
+                        <td>
+                            <input type="date" id="birthdate" name="birthdate" required oninput="validateInputs()">
+                            <div id="birthdate-error" class="error-message"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="btn mx-3 btn-success border" type="submit" id="submit-button" disabled>Submit</button>
+                            <button class="btn mx-3 btn-danger border" type="button" id="reset-button" onclick="resetForm(event)" disabled>Reset</button>
+                            <div id="submission-status" class="submission-status" style="display: none;"></div>
+                            <div id="reset-status" class="reset-status" style="display: none;"></div>
+                        </td>
+                    </tr>
+                </table>
+              </form>
+        </div>
+    </div>
+</div>
+
+  
 
 <script>
     function validateForm(event) {
@@ -63,39 +88,71 @@
         if (nameInput.value === "") {
             document.getElementById("name-error").textContent = "Please enter your name";
             isValid = false;
+        } else {
+            document.getElementById("name-error").textContent = "";
         }
 
         if (emailInput.value === "") {
             document.getElementById("email-error").textContent = "Please enter your email";
             isValid = false;
+        } else {
+            document.getElementById("email-error").textContent = "";
         }
 
         if (phoneInput.value === "") {
             document.getElementById("phone-error").textContent = "Please enter your phone number";
             isValid = false;
+        } else {
+            document.getElementById("phone-error").textContent = "";
         }
 
         if (birthdateInput.value === "") {
             document.getElementById("birthdate-error").textContent = "Please enter your birthdate";
             isValid = false;
+        } else {
+            document.getElementById("birthdate-error").textContent = "";
         }
 
         if (isValid) {
             // Submit the form or perform any necessary actions
             document.getElementById("submission-status").textContent = "Form submitted successfully!";
+            document.getElementById("submission-status").style.display = "block";
+            document.getElementById("submit-button").disabled = true;
+            document.getElementById("reset-button").disabled = false;
         }
-
+        
         return isValid;
     }
 
     function resetForm(event) {
-        event.preventDefault(); // Prevent button default behavior
+        // event.preventDefault(); // Prevent button default behavior
         document.getElementById("myForm").reset();
         // Additional code to reset error messages or any other form-related data
+        
+        // Disable the reset button after successful form reset
+        document.getElementById("reset-button").disabled = true;
+        document.getElementById("reset-status").textContent = "Form reset successfully!";
+        document.getElementById("reset-status").style.display = "block";
+        
+        // Enable the submit button again
+        document.getElementById("submit-button").disabled = false;
+        document.getElementById("submission-status").style.display = "none";
     }
 
-    function disableButton(button) {
-        button.disabled = true;
+    function validateInputs() {
+        var nameInput = document.getElementById("name").value;
+        var emailInput = document.getElementById("email").value;
+        var phoneInput = document.getElementById("phone").value;
+        var birthdateInput = document.getElementById("birthdate").value;
+
+        var isValidInput = nameInput !== "" && emailInput !== "" && phoneInput !== "" && birthdateInput !== "";
+
+        document.getElementById("submit-button").disabled = !isValidInput;
+        
+        if (!isValidInput) {
+            document.getElementById("submission-status").style.display = "none";
+            document.getElementById("reset-status").style.display = "none";
+        }
     }
 </script>
 
