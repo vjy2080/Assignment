@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question_No_3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css" />
+    
+  </head>
+  <body>
+    <div class="hw-100">
+      <h2>Question No.2 <br />What is promises</h2>
+      <hr class="hr" />
+
+    <h2 class="my-5">Promise Handling Example</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center my-5">
+            <div class="my-4">
+          <button class="btn btn-success mx-2" id="resolveBtn">
+            Resolve Promise
+          </button>
+          <button class="btn btn-danger mx-2" id="rejectBtn">
+            Reject Promise
+          </button>
+          <button class="btn btn-warning mx-2" id="catchBtn" disabled>
+            Catch Promise
+          </button>
+        </div>
+          <p id="result" class="my-5"></p>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <script>
+      // Create a function to fetch data asynchronously using a promise
+      function fetchData() {
+        // Simulate an API call with a setTimeout
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // For demonstration purposes, let's assume data is fetched successfully
+            const data = "Data fetched successfully";
+            resolve(data);
+            // In a real scenario, you might use an actual API call and handle errors accordingly.
+            // If an error occurs during fetching, it will call "reject(error)" instead.
+          }, 2000);
+        });
+      }
+
+      // Function to handle the resolve promise and catch promise button click
+      async function onResolveOrCatchClick() {
+        const resultElement = document.getElementById("result");
+        resultElement.innerText = "Fetching data...";
+
+        try {
+          const data = await fetchData();
+          resultElement.innerText = "(Promise resolved) " + data;
+          enableCatchButton(false);
+        } catch (error) {
+          resultElement.innerText = "(Promise rejected) " + error;
+          enableCatchButton(true);
+        }
+      }
+
+      // Function to handle the reject promise button click
+      function onRejectClick() {
+        const resultElement = document.getElementById("result");
+        resultElement.innerText = "Fetching data...";
+
+        // Simulate an error during fetching data
+        const errorMessage = "Error occurred while fetching data";
+        Promise.reject(errorMessage).catch((error) => {
+          resultElement.innerText = "(Promise rejected) " + error;
+          enableCatchButton(true);
+        });
+      }
+
+      // Function to enable or disable the "Catch promise" button
+      function enableCatchButton(enable) {
+        const catchBtn = document.getElementById("catchBtn");
+        catchBtn.disabled = !enable;
+      }
+
+      // Attach click event listeners to the buttons
+      document
+        .getElementById("resolveBtn")
+        .addEventListener("click", onResolveOrCatchClick);
+      document
+        .getElementById("rejectBtn")
+        .addEventListener("click", onRejectClick);
+      document
+        .getElementById("catchBtn")
+        .addEventListener("click", onResolveOrCatchClick);
+    </script>
+  </body>
+</html>
