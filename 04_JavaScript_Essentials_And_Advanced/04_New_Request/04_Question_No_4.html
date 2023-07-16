@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question_No_4</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../CommonStyleSheet/style.css" />
+</head>
+<body>
+    <div class="hw-100">
+      <h2>Question No.4 <br />Use fetch method for calling an api https://fakestoreapi.com/products</h2>
+      <hr class="hr" />
+      <p><b>Answer :- </b></p>
+
+      <div class="text-primary result"></div>
+    </div>
+
+<script>
+    const resultDiv = document.querySelector('.result');
+    // Make a GET request to the API
+    fetch('https://fakestoreapi.com/products')
+      .then(response => {
+        // Check if the request was successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Parse the response as JSON
+        return response.json();
+      })
+      .then(data => {
+        // Data contains the JSON response from the API
+        console.log(data);
+        resultDiv.innerText = JSON.stringify(data, null, 2); // Convert the object to a formatted string
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+
+        // Handle any errors that occurred during the fetch
+      });
+
+  </script>
+</body>
+</html>
