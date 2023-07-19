@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module-8 (Bootstrap Basic & Advanced)</title>
+  <link rel="stylesheet" href="../CommonStyleSheet/style.css" class="style" />
+</head>
+
+<body>
+  <header>
+    <h1>Part 1 : Web Designing</h1>
+    <h2>Module - 8 (Bootstrap Basic & Advanced)</h2>
+    <h3>Vijay G. Prajapati</h3>
+  </header>
+
+  <ol>
+    <hr class="hr" />
+
+    <li>What are the advantages of Bootstrap?</li>
+
+    <p><strong>Answer :- </strong> <br>
+    <h4>Top 10 Advantages of Bootstrap in Web Development</h4>
+    <ol>
+      <li>Easy initiation</li>
+      <li>Responsiveness</li>
+      <li>Highly customizable</li>
+      <li>Extremely user-centric</li>
+      <li>Top-notch support</li>
+      <li>Cross-browser compatibility</li>
+      <li>JavaScript plugins to your rescue</li>
+      <li>Far-reaching popularity</li>
+      <li>Ample documentation</li>
+      <li>Updates at the doorstep</li>
+    </ol>
+    </p>
+
+    <hr>
+
+    <li>What is a Bootstrap Container, and how does it work?</li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> In Bootstrap, container is used to set the content's margins dealing with the responsive behaviors of a
+        layout. </li>
+      <li> It contains the row elements and the row elements are the container of columns (known as grid system). </li>
+      <li> The container class is used to create boxed content. </li>
+
+      <li> Bootstrap comes with three different containers: </li>
+      <ul>
+        <li> .container, which sets a max-width at each responsive breakpoint </li>
+        <li> .container-{breakpoint}, which is width: 100% until the specified breakpoint </li>
+        <li> .container-fluid, which is width: 100% at all breakpoints </li>
+      </ul>
+      <li> The table below illustrates how each container's max-width compares to the original .container and
+        .container-fluid across each breakpoint. </li>
+
+    </ul>
+
+
+
+    </p>
+
+    <hr>
+
+    <li>What are the default Bootstrap text settings?</li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> Bootstrap uses a default font-size of 16px, and its line-height is 1.5. </li>
+      <li> The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif. </li>
+      <li> In addition, all &lt; p &gt; elements have margin-top: 0 and margin-bottom: 1rem (16px by default). </li>
+    </ul>
+    </p>
+
+    <hr>
+
+    <li>What do you know about the Bootstrap Grid System?</li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. </li>
+      <li> It's built with flexbox and is fully responsive. </li>
+      <li> There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. </li>
+      <li> Column classes indicate the number of template columns to span (e.g., col-4 spans four). widths are set in percentages so you always have the same relative sizing. </li>
+      <li><h4> Below is the syntax of a simple "container" example</h4>
+      
+      <pre><code>
+        &lt;div class="container"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col"&gt;
+              Column
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code></pre>
+      </li>
+    </ul>
+
+    </p>
+
+    <hr>
+
+    <li>What is the difference between Bootstrap 4 and Bootstrap 5</li>
+
+    <p><strong>Answer :- </strong>
+
+    <table>
+      <thead>
+        <tr>
+          <th>BASIS OF</th>
+          <th>BOOTSTRAP 4</th>
+          <th>BOOTSTRAP 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grid System</td>
+          <td>It has 5 tier (xs, sm, md, lg, xl).</td>
+          <td>It has 6 tier (xs, sm, md, lg, xl, xxl).</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>It has limited colors.</td>
+          <td>
+            Extra colors added with the looks, A card improved color palette. there
+            are various shades available to choose.
+          </td>
+        </tr>
+        <tr>
+          <td>Jquery</td>
+          <td>It has jquery and all related plugins.</td>
+          <td>
+            Jquery is removed and switched to vanilla JS with some working plugins
+          </td>
+        </tr>
+        <tr>
+          <td>Internet Explorer</td>
+          <td>Bootstrap 4 supports both IE 10 and 11.</td>
+          <td>Bootstrap 5 doesn't support IE 10 and 11.</td>
+        </tr>
+        <tr>
+          <td>Form elements</td>
+          <td>
+            Radio buttons, checkboxes have different look in different OS and
+            browsers. The form uses whatever default browsers provide.
+          </td>
+          <td>
+            The look of form elements will not change, on different OS or browser.
+            The forms can be customized and form controls can be added, they would
+            not depend on browser.&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>Utilities API</td>
+          <td>We cannot modify utilities in bootstrap 4</td>
+          <td>
+            Bootstrap 5 gave freedom to modify and also create our own utility
+          </td>
+        </tr>
+        <tr>
+          <td>Gutter</td>
+          <td>We use .glutter with fontsize in px</td>
+          <td>We use .g* with fontsize in rem</td>
+        </tr>
+        <tr>
+          <td>Vertical Classes</td>
+          <td>Columns can be positioned relative</td>
+          <td>Columns cannot be positioned relative</td>
+        </tr>
+        <tr>
+          <td>Bootstrap Icons</td>
+          <td>
+            Bootstrap 4 doesn't have its own SVG icons, we have to use font-awesome
+            for icons.
+          </td>
+          <td>Bootstrap 5 have its own SVG icons</td>
+        </tr>
+        <tr>
+          <td>Jumbotron</td>
+          <td>It supports.</td>
+          <td>It doesn't support jumbotron.</td>
+        </tr>
+        <tr>
+          <td>Card deck</td>
+          <td>
+            The card deck is used to create a set of cards with equal width and
+            height.
+          </td>
+          <td>Card deck class in removed in bootstrap</td>
+        </tr>
+        <tr>
+          <td>Navbar</td>
+          <td>
+            We have inline-block property and we will get white dropdown as default
+            for dropdown-menu-dark class.
+          </td>
+          <td>
+            Inline-block property is removed and we will get black dropdown as
+            default for dropdown-menu-dark class.
+          </td>
+        </tr>
+        <tr>
+          <td>Static Site Generator</td>
+          <td>Bootstrap 4 uses Jekyll software.</td>
+          <td>
+            Bootstrap 5 uses Hugo software as it is fast static site generator.
+          </td>
+        </tr>
+        <tr>
+          <td>flexbox grid</td>
+          <td>
+            this makes easier to implement vertical designs, and the columns and
+            rows can easily be implemented. the classes justify-center-content can
+            directly be used to align according to the requirement.
+          </td>
+          <td>
+            advanced grid system is made available , also columns don't have
+            relative positions. &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>RTL Support</td>
+          <td>It does not enable RTL(Right to Left) switching.</td>
+          <td>It enables RTL(Right to Left) switching.</td>
+        </tr>
+        <tr>
+          <td>Offcanvas Component</td>
+          <td>It does not support Offcanvas Component.</td>
+          <td>It supports Offcanvas Component(that is it is available now).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </p>
+
+    <hr>
+
+    <li>
+      What is a Button Group, and what is the class for a basic Button Group?
+    </li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> “Button Groups” in Bootstrap is a class of name “btn-group” which is used to create a series of buttons in
+        groups (without spaces) vertically or horizontally.</li>
+      <li>The button group class where each button has its own class of “btn”.</li>
+    <li>
+      <h4> Below is the syntax of Button Group</h4>
+      <pre><code>
+        &lt;div class="btn-group"&gt;
+          &lt;button type="button" class="btn"&gt;Click&lt;/button&gt;
+        &lt;/div&gt;
+      </code></pre>
+    </li>
+    </ul>
+    </p>
+
+    <hr>
+
+    <li>How can you use Bootstrap to make thumbnails?</li>
+
+    <p><strong>Answer :- </strong>
+    <h4>To create thumbnails using Bootstrap</h4>
+    <ul>
+      <li> Add an &lt;a&gt; tag with the class of .thumbnail around an image. </li>
+      <li> This adds four pixels of padding and a gray border. </li>
+      <li> On hover, an animated glow outlines the image. </li>
+    </ul>
+    </p>
+
+    <hr>
+
+    <li>In Bootstrap 4, what is flexbox?</li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> Bootstrap 4 is built with flexbox, but not every element's display has been changed to display: flex as this
+        would add many unnecessary overrides and unexpectedly change key browser behaviors. </li>
+      <li> Most of our components are built with flexbox enabled. </li>
+      <li> Should you need to add display: flex to an element, do so with .d-flex or one of the responsive variants
+        (e.g., .d-sm-flex). </li>
+      <li> You'll need this class or display value to allow the use of our extra flexbox utilities for sizing,
+        alignment, spacing, and more. </li>
+    </ul>
+    </p>
+
+    <hr>
+
+    <li>How can we create an alert in Bootstrap?</li>
+    <p><strong>Answer :- </strong>
+    <h4>Below is the procedure to implement a simple warning alert in Bootstrap.</h4>
+
+    <ul>
+      <li>Include Bootstrap and jQuery CDN into the
+
+        <head> tag before all other stylesheets to load CSS.
+      </li>
+      <li>Add the .alert and the warning alert contextual classes (e.g., .alert-warning).
+      </li>
+      <li>
+        <h4>Here a list of contextual classes below :- </h4>
+        <ol>
+          <li> primary-alert </li>
+          <li> secondary-alert </li>
+          <li> success-alert </li>
+          <li> danger-alert </li>
+          <li> warning-alert </li>
+          <li> info-alert </li>
+          <li> light-alert </li>
+          <li> dark-alert </li>
+        </ol>
+      </li>
+      <li>
+        <h4>Syntax of alert</h4>
+        <code>
+                 &lt; div class="alert alert-primary" role="alert" &gt; &lt; /div &gt;
+                   </code>
+      </li>
+    </ul>
+    </p>
+    <hr>
+
+    <li>What is a bootstrap card and how would you create one?</li>
+
+    <p><strong>Answer :- </strong>
+    <ul>
+      <li> A Bootstrap card is a .card class with the .card-body class nested inside. </li>
+      <li> This creates a card with a rounded border inside which you can place text, images, links, and other Bootstrap
+        elements. </li>
+      <li>
+        <h4>Below is the syntax of bootstrap card</h4>
+      </li>
+      <pre>
+      <code>
+        &lt;div class="card" style="width: 18rem;"&gt;
+          &lt;img src="..." class="card-img-top" alt="..."&gt;
+          &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            &lt;p class="card-text"&gt;Some quick example text&lt;/p&gt;
+            &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+    </ul>
+
+    </p>
+
+  </ol>
+</body>
+
+</html>
