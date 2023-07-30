@@ -15,6 +15,7 @@
       <h3>Vijay G. Prajapati</h3>
     </header>
 
+		
     <ol>
       <hr class="hr" />
       <li>What is React Js?</li>
@@ -97,9 +98,36 @@
         How to install React Js on Windows, Linux Operating System?
       </li>
       <p><strong>Answer :- </strong> <br />
+				<h4>
+					Install React on Windows OS
+				</h4>
       <ul>
-        <li>Install Node.js installer for windows. Click on this <a href="https://nodejs.org/en">Link</a>. Here install the LTS (Long Time Support) version</li>
-      </ul>
+        <li>Step 1: Install Node.js installer for windows.</li>
+				 Click on this <a href="https://nodejs.org/en">Link</a>. Here install the LTS (Long Time Support) version
+				<li>Step 2: Install React js in Windows</li>
+				<code>npx create-react-app my-app</code>
+				<li>Step 3: Create and Launch Your First React Application</li>
+						<code>create-react-app my-app</code> <br>
+						<code>cd my-app</code><br>
+						<code>npm start</code>
+					      </ul>
+							
+					<h4>
+						Install React on Linux OS
+					</h4>
+
+					<ul>
+						<li>Step 1: Install npm </li>
+						<code>sudo apt install npm</code> 
+						<li>Step 2: Install create-react-app Utility </li>
+						<code>sudo npm -g install create-react-app</code> 
+						<li>Step 3: Create and Launch Your First React Application</li>
+						<code>create-react-app my-app</code> <br>
+						<code>cd my-app</code><br>
+						<code>npm start</code>
+					
+					</ul>
+
       </p>
 
       <hr />
@@ -114,13 +142,42 @@
       <hr />
 
       <li>How to check version of React Js?</li>
-      <p><strong>Answer :- </strong> <br /></p>
+      <p><strong>Answer :- </strong> <br />
+			
+				<ol>
+					<h4>There are three way to check React JS version :- </h4>
+					<li>Using package.json file:</li>
+					<code>npx create-react-app name_of_the_app<br/>
+						After create app, We can found package.json file, and version is mentioned in this file.</code>
+					<li>Using the command line:</li>
+					<code>npm view react version</code>
+					<li>Using the version property of default import from React:</li>
+<pre><code>
+	import React from 'react';
+ 
+		const App = () => {
+		  return &gt;h1&gt;
+		        We are currently using react version {React.version}
+		  &gt;/h1&gt;
+		}
+ 
+	export default App;
+</code></pre>
+				</ol>
+			
+			</p>
 
       <hr />
 
       <li>How to change in components of React Js?</li>
 
-      <p><strong>Answer :- </strong> <br /></p>
+      <p><strong>Answer :- </strong> <br />
+			<ul>
+				<li>React components automatically re-render whenever there is a change in their state or props.</li>
+				<li>A simple update of the state, from anywhere in the code, causes all the User Interface (UI) elements to be re-rendered automatically.</li>
+				<li>However, there may be cases where the render() method depends on some other data.</li>
+			</ul>
+			</p>
     </ol>
   </body>
 </html>
