@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module-5(HTML)</title>
+    <link rel="stylesheet" href="../CommonStyleSheet/style.css" class="style" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Part 1 : Web Designing</h1>
+      <h2>Module-5 ( HTML - 5 )</h2>
+      <h3>Vijay G. Prajapati</h3>
+    </header>
+
+    <ol>
+      <hr class="hr" />
+      <li>What are the new tags added in HTML5?</li>
+
+      <p><strong>Answer :- </strong> <br>
+        
+        The following tags (elements) have been added in HTML5.
+        <table>
+            <tbody>
+              <tr>
+                <th width="30%">Tags (Elements)</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>&lt;article&gt;</td>
+                <td>
+                  Represents an independent piece of content of a document, such as a blog
+                  entry or newspaper article
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;aside &gt;</td>
+                <td>
+                  Represents a piece of content that is only slightly related to the rest
+                  of the page.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;audio&gt;</td>
+                <td>Defines an audio file.</td>
+              </tr>
+              <tr>
+                <td>&lt;canvas&gt;</td>
+                <td>
+                  This is used for rendering dynamic bitmap graphics on the fly, such as
+                  graphs or games.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;command&gt;</td>
+                <td>Represents a command the user can invoke.</td>
+              </tr>
+              <tr>
+                <td>&lt;datalist&gt;</td>
+                <td>
+                  Together with the a new list attribute for input can be used to make
+                  comboboxes
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;details&gt;</td>
+                <td>
+                  Represents additional information or controls which the user can obtain
+                  on demand
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;embed&gt;</td>
+                <td>Defines external interactive content or plugin.</td>
+              </tr>
+              <tr>
+                <td>&lt;figure&gt;</td>
+                <td>
+                  Represents a piece of self-contained flow content, typically referenced
+                  as a single unit from the main flow of the document.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;footer&gt;</td>
+                <td>
+                  Represents a footer for a section and can contain information about the
+                  author, copyright information, et cetera.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;header&gt;</td>
+                <td>Represents a group of introductory or navigational aids.</td>
+              </tr>
+              <tr>
+                <td>&lt;hgroup&gt;</td>
+                <td>Represents the header of a section.</td>
+              </tr>
+              <tr>
+                <td>&lt;keygen&gt;</td>
+                <td>Represents control for key pair generation.</td>
+              </tr>
+              <tr>
+                <td>&lt;mark&gt;</td>
+                <td>
+                  Represents a run of text in one document marked or highlighted for
+                  reference purposes, due to its relevance in another context.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;meter&gt;</td>
+                <td>Represents a measurement, such as disk usage.</td>
+              </tr>
+              <tr>
+                <td>&lt;nav&gt;</td>
+                <td>Represents a section of the document intended for navigation.</td>
+              </tr>
+              <tr>
+                <td>&lt;output&gt;</td>
+                <td>
+                  Represents some type of output, such as from a calculation done through
+                  scripting.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;progress&gt;</td>
+                <td>
+                  Represents a completion of a task, such as downloading or when
+                  performing a series of expensive operations.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;ruby&gt;</td>
+                <td>
+                  Together with &lt;rt&gt; and &lt;rp&gt; allow for marking up ruby
+                  annotations.
+                </td>
+              </tr>
+              <tr>
+                <td>&lt;section&gt;</td>
+                <td>Represents a generic document or application section</td>
+              </tr>
+              <tr>
+                <td>&lt;time&gt;</td>
+                <td>Represents a date and/or time.</td>
+              </tr>
+              <tr>
+                <td>&lt;video&gt;</td>
+                <td>Defines a video file.</td>
+              </tr>
+              <tr>
+                <td>&lt;wbr&gt;</td>
+                <td>Represents a line break opportunity.</td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </p>
+
+      <hr />
+      <li>How to embed audio and video in a webpage?</li>
+
+      <p><strong>Answer :- </strong>
+        <h4>==>  Audio</h4>
+        <p>To embed audio in HTML, we use the &lt;audio&gt; tag. <br>
+
+            <b><u> Syntax  </u></b>
+           <pre>
+            <code>
+                &lt;audio&gt;
+                    &lt;source src="file_link" type="audio_file_type"&gt;
+                &lt;/audio&gt;
+            </code>
+        </pre>
+        <b><u> Preview  </u></b> <br>
+        <audio controls>
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/mp3" />
+        </audio>
+
+        <h4>==> Video</h4>
+        <p>To embed video in HTML, we use the &lt;video&gt; tag. <br>
+
+            <b><u> Syntax  </u></b>
+           <pre>
+            <code>
+                &lt;video&gt;
+                    &lt;source src="file_link" type="video_file_type" controls
+                    width="620" height="440"&gt;
+                &lt;/video&gt;
+            </code>
+        </pre>
+        <b><u> Preview  </u></b> <br>
+        <video src=http://techslides.com/demos/sample-videos/small.webm type=video/webm controls
+        width="620" height="440">
+ </video>
+        </p>
+    </p>
+
+      <hr />
+      <li>Semantic element in HTML5?</li>
+
+      <p><strong>Answer :- </strong>
+       <p> Semantic Elements: Semantic elements have meaningful names which tell about the type of content.</p>
+        <p>HTML5 introduces many semantic elements as mentioned below :- </p>
+       <ul>
+       <li> article </li>
+       <li> aside </li>
+       <li> details </li>
+       <li> figcaption </li>
+       <li> figure </li>
+       <li> footer </li>
+       <li> header </li>
+       <li> main </li>
+       <li> mark </li>
+       <li> nav </li>
+       <li> section </li>
+       </ul>
+    </p>
+
+      <hr />
+      <li>Canvas and SVG tags</li>
+
+      <p><strong>Answer :- </strong>
+        <p><b>Canvas:</b> The HTML element is used to draw graphics on the fly, via scripting (usually JavaScript). The element is only a container for graphics. We must use a script to actually draw the graphics. Canvas has several methods for drawing paths, boxes, circles, text, and adding images.</p>
+    <p><b>SVG:</b> The Scalable Vector Graphics (SVG) is an XML-based image format that is used to define two-dimensional vector-based graphics for the web.</p>
+    
+    </p>
+
+    </ol>
+  </body>
+</html>
