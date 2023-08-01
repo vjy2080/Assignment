@@ -1,5 +1,6 @@
 import React from 'react';
-import Class from '../src/flow-of-mounting-phase.png'
+import ImageOfLifeCycleInClassCompo from '../src/flow-of-mounting-phase.png'
+import UpdatingLifecycle from '../src/UpdatingLifecycle.jpg'
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
         <div className="row">
           <div className="col">
             <h1 className="text-center text-danger mt-3">React Component Lifecycle</h1>
-            <h2>What is React Component Lifecycle?</h2>
+            <h2 className='text-primary'>What is React Component Lifecycle?</h2>
             <p>The lifecycle of a react component can be broken down into four major steps</p>
             <ol>
               <li>Mounting
@@ -45,9 +46,46 @@ export default function App() {
               <li>These components have a lifecycle and react life cycle methods are a series of events that happen throughout this lifecycle.</li>
               <li>Class components rely on life cycle methods for performing tasks such as state management, and calling external APIs. </li>
               <li>To a beginner, these can look complex.</li>
-
             </ol>
-            <img src={class} alt="" />
+            <img src={ImageOfLifeCycleInClassCompo} alt="ImageOfLifeCycleInClassCompo" width={400} />
+            <h4>The constructor function is used to :</h4>
+            <ul>
+              <li>Initialize local state or any other third-party libraries.</li>
+              <li>Binding event handlers to the instance.</li>
+            </ul>
+            <h4>static getDerivedStateFromProps( )</h4>
+            <ul>
+              <li>static getDerivedStateFromProps( ) is a react life cycle method that is designed to replace componentWillReceiveProps.</li>
+              <li>getDerivedStateFromProps is invoked just before calling the render method, it happens both on initial and subsequent mount.</li>
+              <li>This method should return an object to update the state or null to update nothing.</li>
+              <li>The main purpose of this method is to make sure that the state and props are in sync.</li>
+              <li>static getDerivedStateFromProps() takes in props and state as arguments and returns an object to update the state.</li>
+            </ul>
+
+            <h4>render()</h4>
+
+            <ul>
+              <li>Render function is called after the static getDerivedStateFromProps method.</li>
+              <li>This method is required in a class component.</li>
+              <li>To render elements to the DOM we can return JSX inside of the render method.</li>
+              <li>The render method should be pure, we cannot use setState or interact with external APIs.</li>
+            </ul>
+
+            <h4>componentDidMount()</h4>
+
+            <ul>
+              <li> Once the render method is called, the component is inserted into the DOM and then the componentDidMount() method is called.</li>
+              <li> This method is the place where you update your state and call external APIs.</li>
+            </ul>
+            <h4>Updating Lifecycle Methods</h4>
+
+            <ul>
+              <li>In React the component is rerendered whenever a change is made to the state or the props of that component.</li>
+              <li>This rerendering of the element is called updating.</li>
+            </ul>
+
+            <img src={UpdatingLifecycle} alt="UpdatingLifecycle" width={400} />
+
 
             <h2 className='text-primary'>React Lifecycle Methods for Functional Components</h2>
             <ol>
