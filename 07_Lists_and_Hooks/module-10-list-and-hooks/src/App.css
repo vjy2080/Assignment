@@ -1,3 +1,24 @@
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
+    padding: 30px;
+    background: rgb(244, 202, 112);
+    background: linear-gradient(0deg, rgba(244, 202, 112, 1) 0%, rgba(173, 238, 147, 1) 25%, rgba(141, 240, 231, 1) 50%, rgba(173, 238, 147, 1) 75%, rgba(244, 202, 112, 1) 100%);
+    border: 10px solid rgb(2, 83, 70);
+    line-height: 2rem;
+}
+
+h4 {
+    color: purple;
+}
+
+h2{
+    color: rgb(161, 45, 2);
+}
+
+h1{
+    color: rgb(7, 140, 131);
+}
+
+.hr {
+    border: 2px solid black;
 }
