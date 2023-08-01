@@ -1,0 +1,1 @@
+• Explain Life cycle in Class Component and functional component with Hooks
