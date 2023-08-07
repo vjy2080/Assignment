@@ -5,6 +5,11 @@
     font-family: sans-serif;
 }
 
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
 .container {
     color: white;
     display: flex;
@@ -129,53 +134,55 @@ p {
     width: 60%;
     line-height: 20px;
 }
-.anchor-logo{
+
+.anchor-logo {
     display: block;
     text-align: center;
     position: relative;
     margin-top: -105px;
 }
 
-.detail{
+.detail {
     display: flex;
     justify-content: space-evenly;
 }
 
 
-#bottom .bdr{
+#bottom .bdr {
     display: flex;
     border: 1px solid #999999;
     border-radius: 2px;
     justify-content: center;
     width: 60px;
-    height:60px;   
-    transition: all 1s ease; 
+    height: 60px;
+    transition: all 1s ease;
 }
 
-#bottom .bdr:hover{
+#bottom .bdr:hover {
     border: 2px solid orangered;
     transform: rotate(45deg);
 
 }
 
-#bottom .img{
+#bottom .img {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 
 }
 
-.detail img{
+.detail img {
     padding: 20px;
     display: inline-block;
-    
+
 }
 
-#bottom img:hover{
+#bottom img:hover {
     transform: rotate(-45deg);
-    
+
 }
-#bottom h4{
+
+#bottom h4 {
 
     font-size: 18px;
     letter-spacing: 1px;
@@ -184,10 +191,12 @@ p {
     font-family: "Open Sans";
     text-align: center;
 }
-#bottom h4:hover{
-    color: #e74c3c;}
-    
-#bottom p{
+
+#bottom h4:hover {
+    color: #e74c3c;
+}
+
+#bottom p {
     width: 255px;
     height: 70px;
     font-size: 12px;
@@ -198,4 +207,3 @@ p {
     font-family: "Source Sans Pro";
     text-align: center;
 }
-
