@@ -4,7 +4,7 @@ import React from 'react';
 export default function NavBar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <div className="container-fluid">
                     <button
                         className="navbar-toggler"
@@ -19,13 +19,13 @@ export default function NavBar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item mx-5">
+                            <li className="nav-item mx-3">
                                 <Link to="/">Home</Link>
                             </li>
-                            <li className="nav-item mx-5">
+                            <li className="nav-item mx-3">
                                 <Link to="/ClassCompo">Example Of Class Component</Link>
                             </li>
-                            <li className="nav-item mx-5">
+                            <li className="nav-item mx-3">
                                 <Link to="/functionalCompo">Example Of Functional Component</Link>
                             </li>
                         </ul>
