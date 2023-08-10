@@ -11,7 +11,7 @@ export default function ExampleOfClassComponent() {
                     <div className="col">
                         <div className="text-center border w-50 pt-2 rounded border-info">
                             <h3>
-                                <Link to="classcompo">Class Component</Link>
+                                <Link to="ClassCompo">Class Component</Link>
                             </h3>
                         </div>
                         <div className="col">

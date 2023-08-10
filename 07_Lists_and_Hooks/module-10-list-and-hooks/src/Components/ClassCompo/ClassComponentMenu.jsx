@@ -4,16 +4,16 @@ import { Link, Outlet } from 'react-router-dom';
 class ClassComponentMenu extends Component {
     render() {
         return (
-            <div>
-                <ol>
-                    <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
-                    <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
-                    <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
-                    <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
-                    <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
-                </ol>
-                <Outlet></Outlet>
-            </div>
+            <>
+                <div>
+                    <ol>
+                        <li><Link className='text-white' to="mounting">Example Of Mounting</Link></li>
+                    </ol>
+                </div>
+                <div>
+                    <Outlet></Outlet>
+                </div>
+            </>
         );
     }
 }
