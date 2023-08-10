@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import ExampleOfMounting from './ExampleOfMounting.jsx';
 import ExampleOfUpdating from './ExampleOfUpdating.jsx';
 import ExampleOfUnmounting from './ExampleOfUnmounting.jsx';
+import ExampleOfErrorHandling from './ExampleOfErrorHandling.jsx';
 
 class ClassCompoRouter extends Component {
     render() {
@@ -12,7 +13,8 @@ class ClassCompoRouter extends Component {
                 <Route path="/" element={<ClassComponentMenu />}>
                     <Route path="mounting" element={<ExampleOfMounting />} />
                     <Route path="updating" element={<ExampleOfUpdating />} />
-                    <Route path="unmounting " element={<ExampleOfUnmounting />} />
+                    <Route path="unmounting" element={<ExampleOfUnmounting />} />
+                    <Route path="error" element={<ExampleOfErrorHandling />} />
                     {/* <Route path="b" lazy="b" /> */}
                 </Route>
             </Routes>
