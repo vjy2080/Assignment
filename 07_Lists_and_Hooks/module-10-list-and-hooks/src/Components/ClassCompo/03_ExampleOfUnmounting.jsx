@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Child from './childForUnmounting';
+import Child from './03.1_childForUnmounting';
 
 class ExampleOfUnmounting extends Component {
 
