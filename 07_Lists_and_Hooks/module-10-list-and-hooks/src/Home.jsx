@@ -1,7 +1,7 @@
 import React from 'react';
-import MountingLifecycle from '../src/MountingLifecycle.png'
-import UpdatingLifecycle from '../src/UpdatingLifecycle.png'
-import UnmountingLifecycle from '../src/UnmountingLifecycle.png'
+import MountingLifecycle from '../src/Images/MountingLifecycle.png'
+import UpdatingLifecycle from '../src/Images/UpdatingLifecycle.png'
+import UnmountingLifecycle from '../src/Images/UnmountingLifecycle.png'
 
 
 export default function Home() {

@@ -5,7 +5,7 @@ class ClassComponentMenu extends Component {
     render() {
         return (
             <>
-                <div>
+                <div className='my-5'>
                     <ol>
                         <li><Link className='text-dark' to="mounting">Example Of Mounting</Link></li>
                         <li><Link className='text-dark' to="updating">Example Of Updating</Link></li>

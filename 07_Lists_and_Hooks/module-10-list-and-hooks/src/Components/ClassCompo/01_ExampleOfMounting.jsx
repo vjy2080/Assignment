@@ -25,7 +25,7 @@ class ExampleOfMounting extends React.Component {
 
 
         <h2 className='my-3'>The Syntax is :- </h2>
-        <code>
+        <code  className='text-dark'>
           class ExampleOfMounting extends React.Component &#123; <br />
           &nbsp; constructor(props) &#123; <br />
           &nbsp; super(props); <br />

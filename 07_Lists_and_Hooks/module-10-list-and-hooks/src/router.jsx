@@ -24,7 +24,11 @@ const router = createBrowserRouter([
 
             {
                 path: "functionalcompo/*",
-                element: <Suspense fallback={<LoaderCompo />}><FunctionalCompoRouter /> </Suspense>,
+                element: <Suspense fallback={<LoaderCompo />}>
+
+                    <FunctionalCompoRouter />
+
+                </Suspense>,
             }]
     },
     {

@@ -5,23 +5,25 @@ class ExampleOfUnmounting extends Component {
 
     state = {
         showChild: true,
+        showMsg: false
     };
 
     handleDelete = () => {
         this.setState({
             showChild: false,
+            showMsg: true
         });
     };
 
 
 
     render() {
-        const { showChild } = this.state;
-
+        const { showChild, showMsg } = this.state;
         return (
             <>
                 {showChild && <Child />}
                 <div className="text-center my-5">
+                    <div className='my-5'> {showMsg && <h3>Unmounted</h3>} </div>
                     <button className='btn btn-danger text-dark' type="button" onClick={this.handleDelete}>
                         Delete Header
                     </button>
@@ -31,7 +33,7 @@ class ExampleOfUnmounting extends Component {
                 <hr className='border border-dark border-2 opacity-100' />
 
                 <h2 className='my-3'>The Syntax is :- </h2>
-                <blockquote>
+                <code className='text-dark'>
                     <p className='fs-4'>Syntax of parent</p>
                     class ExampleOfUnmounting extends Component &#123; <br />
                     &nbsp; state = &#123; <br />
@@ -70,7 +72,7 @@ class ExampleOfUnmounting extends Component {
                     &#125; <br />
                     export default Child;
 
-                </blockquote>
+                </code>
             </>
         );
     }

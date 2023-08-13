@@ -5,7 +5,7 @@ class Child extends Component {
 
 
     componentWillUnmount() {
-        alert('The component named Child is about to be unmounted.');
+        console.log('The component named Child is about to be unmounted.');
     }
 
     render() {

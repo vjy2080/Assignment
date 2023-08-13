@@ -28,7 +28,7 @@ class ExampleOfUpdating extends Component {
                     <hr className='border border-dark border-2 opacity-100' />
 
                     <h2 className='my-3'>The Syntax is :- </h2>
-                    <code>
+                    <code  className='text-dark'>
                         class ExampleOfUpdating extends Component &#123; <br />
                         &nbsp; constructor(props) &#123; <br />
                         &nbsp;&nbsp; super(props); <br />

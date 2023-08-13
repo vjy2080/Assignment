@@ -5,7 +5,7 @@ class FunctionalComponentMenu extends Component {
     render() {
         return (
             <>
-                <div>
+                <div className='my-5'>
                     <ol>
                         <li><Link className='text-dark' to="useState">Example Of useState</Link></li>
                         <li><Link className='text-dark' to="useEffect">Example Of useEffect</Link></li>
