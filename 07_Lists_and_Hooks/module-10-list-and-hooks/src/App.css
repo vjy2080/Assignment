@@ -7,7 +7,7 @@
     font-family: 'Itim', cursive;
 }
 
-.container {
+.main {
     padding: 30px;
     background: rgb(244, 202, 112);
     background: linear-gradient(0deg, rgba(244, 202, 112, 1) 0%, rgba(173, 238, 147, 1) 25%, rgba(141, 240, 231, 1) 50%, rgba(173, 238, 147, 1) 75%, rgba(244, 202, 112, 1) 100%);

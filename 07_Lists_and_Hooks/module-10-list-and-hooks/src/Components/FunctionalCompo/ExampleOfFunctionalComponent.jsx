@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
-// import FunctionalComponentMenu from './FunctionalComponentMenu.jsx';
 
 
 export default function ExampleOfFunctionalComponent() {
   return (
     <>
-      <div className="container">
+      <div className="main">
         <h2 className='text-center' >React Lifecycle Methods for Functional Components</h2>
         <div className="row my-3 p-3 border border-secondary rounded">
           <div className="col">

@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 export default function ExampleOfClassComponent() {
     return (
         <>
-            <div className="container">
+            <div className="main">
                 <h2 className='text-center'>React Lifecycle Methods for Class Components</h2>
                 <div className="row my-3 p-3 border border-secondary rounded">
                     <div className="col">
@@ -16,7 +16,7 @@ export default function ExampleOfClassComponent() {
                         </div>
                         <div className="col">
 
-                            <Outlet />
+                            <Outlet></Outlet>
                         </div>
                     </div>
                 </div>

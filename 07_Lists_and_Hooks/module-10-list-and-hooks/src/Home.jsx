@@ -7,7 +7,7 @@ import UnmountingLifecycle from '../src/UnmountingLifecycle.png'
 export default function Home() {
     return (
         <>
-            <div className="container">
+            <div className="main">
                 <div className="row">
                     <div className="col">
                         <h1 className="text-center mt-3">React Component Lifecycle</h1>
