@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import FunctionalCompo from "../src/Components/ExampleOfFunctionalComponent"
-import ClassCompo from "../src/Components/ExampleOfClassComponent"
+import FunctionalCompo from "../src/Components/FunctionalCompo/ExampleOfFunctionalComponent"
+import ClassCompo from "./Components/ClassCompo/ExampleOfClassComponent"
 import ClassCompoRouter from "../src/Components/ClassCompo/ClassCompoRouter"
+import FunctionalCompoRouter from "../src/Components/FunctionalCompo/FunctionalCompoRouter"
 import Home from "./Home"
 import LoaderCompo from './CommanCompo/LoaderCompo.jsx';
 import NavBar from "./CommanCompo/NavBar";
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
 
             {
                 path: "functionalcompo/*",
-                element: <Suspense fallback={<LoaderCompo />}><FunctionalCompo /> </Suspense>,
+                element: <Suspense fallback={<LoaderCompo />}><FunctionalCompoRouter /> </Suspense>,
             }]
     },
     {
