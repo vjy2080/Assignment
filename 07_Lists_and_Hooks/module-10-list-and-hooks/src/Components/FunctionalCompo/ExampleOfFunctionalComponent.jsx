@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
+// import FunctionalComponentMenu from './FunctionalComponentMenu.jsx';
 
 
 export default function ExampleOfFunctionalComponent() {
@@ -14,6 +15,7 @@ export default function ExampleOfFunctionalComponent() {
                 <Link to="functionalcompo">Fucntional Component</Link>
               </h3>
             </div>
+
             <div className="col">
               <Outlet></Outlet>
             </div>
