@@ -8,8 +8,12 @@ class ExampleOfUnmounting extends Component {
     };
 
     handleDelete = () => {
-        this.setState({ showChild: false });
+        this.setState({
+            showChild: false,
+        });
     };
+
+
 
     render() {
         const { showChild } = this.state;

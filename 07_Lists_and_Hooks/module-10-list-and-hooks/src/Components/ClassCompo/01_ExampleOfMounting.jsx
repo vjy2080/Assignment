@@ -17,7 +17,7 @@ class ExampleOfMounting extends React.Component {
   render() {
     return (
       <>
-        <h1 className='my-5'>Example of "constructor" & "componentDidMount"</h1>
+        <h1 className='my-5 text-center'>Example of "constructor" & "componentDidMount"</h1>
         <p className='text-center'>componentDidMount after <strong>"3-seconds"</strong></p>
         <h3 className='mb-5 text-center'>My Favorite Color is <span className='text-danger'>"{this.state.favoritecolor}"</span></h3>
 

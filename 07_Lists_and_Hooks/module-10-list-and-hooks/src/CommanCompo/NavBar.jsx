@@ -20,13 +20,13 @@ export default function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item mx-3">
-                                <Link to="/">Home</Link>
+                                <Link className="text-warning" to="/">Home</Link>
                             </li>
                             <li className="nav-item mx-3">
-                                <Link to="/ClassCompo">Example Of Class Component</Link>
+                                <Link className="text-warning" to="/ClassCompo">Example Of Class Component</Link>
                             </li>
                             <li className="nav-item mx-3">
-                                <Link to="/functionalCompo">Example Of Functional Component</Link>
+                                <Link className="text-warning" to="/functionalCompo">Example Of Functional Component</Link>
                             </li>
                         </ul>
                     </div>
