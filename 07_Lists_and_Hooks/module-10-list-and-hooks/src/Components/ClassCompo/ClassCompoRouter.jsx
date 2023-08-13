@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ClassComponentMenu from './ClassComponentMenu.jsx';
 import { Route, Routes } from 'react-router-dom';
+import ClassComponentMenu from './ClassComponentMenu.jsx';
 import ExampleOfMounting from './01_ExampleOfMounting.jsx';
 import ExampleOfUpdating from './02_ExampleOfUpdating.jsx';
 import ExampleOfUnmounting from './03_ExampleOfUnmounting.jsx';
@@ -15,7 +15,6 @@ class ClassCompoRouter extends Component {
                     <Route path="updating" element={<ExampleOfUpdating />} />
                     <Route path="unmounting" element={<ExampleOfUnmounting />} />
                     <Route path="error" element={<ExampleOfErrorHandling />} />
-                    {/* <Route path="b" lazy="b" /> */}
                 </Route>
             </Routes>
         );

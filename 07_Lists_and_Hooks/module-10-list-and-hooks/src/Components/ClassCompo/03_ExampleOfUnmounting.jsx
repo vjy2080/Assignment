@@ -38,16 +38,18 @@ class ExampleOfUnmounting extends Component {
                     class ExampleOfUnmounting extends Component &#123; <br />
                     &nbsp; state = &#123; <br />
                     &nbsp;&nbsp; showChild: true, <br />
+                    &nbsp;&nbsp; showMsg: false <br />
                     &nbsp; &#125;; <br />
                     &nbsp; handleDelete = () =&gt; &#123; <br />
-                    &nbsp;&nbsp; this.setState(&#123; showChild: false &#125;); <br />
+                    &nbsp;&nbsp; this.setState(&#123; showChild: false,showMsg: false &#125;); <br />
                     &nbsp; &#125;; <br />
                     &nbsp; render() &#123; <br />
-                    &nbsp;&nbsp; const &#123; showChild &#125; = this.state; <br />
+                    &nbsp;&nbsp; const &#123; showChild, showMsg &#125; = this.state; <br />
                     &nbsp;&nbsp;&nbsp; return ( <br />
                     &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt; <br />
                     &nbsp;&nbsp;&nbsp;&nbsp; &#123;showChild && &lt;Child /&gt;&#125; <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div className="text-center my-5"&gt; <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div className='my-5'&gt; &#123;showMsg && &lt;h3&gt;Unmounted&lt;/h3&gt;&#125; &lt;/div&gt; <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button className='btn btn-danger text-dark' type="button" onClick=&#123;this.handleDelete&#125;&gt; <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete Header <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt; <br />
@@ -64,7 +66,7 @@ class ExampleOfUnmounting extends Component {
 
                     class Child extends Component &#123; <br />
                     &nbsp; componentWillUnmount() &#123; <br />
-                    &nbsp;&nbsp;&nbsp; alert('The component named Child is about to be unmounted.'); <br />
+                    &nbsp;&nbsp;&nbsp; console.log('The component named Child is about to be unmounted.'); <br />
                     &nbsp; &#125; <br />
                     &nbsp; render() &#123; <br />
                     &nbsp;&nbsp;&nbsp; return &lt;h1 className='text-center'&gt;This header will unmount after clicking on button "DELETE HEADER"&lt;/h1&gt;; <br />
