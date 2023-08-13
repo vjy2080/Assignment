@@ -7,10 +7,6 @@ import router from "./router"
 // import LoaderCompo from './CommanCompo/LoaderCompo';
 import { RouterProvider } from "react-router-dom";
 
-
-
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
