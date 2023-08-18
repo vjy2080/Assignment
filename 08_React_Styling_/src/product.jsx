@@ -27,7 +27,7 @@ function ProductPage() {
 
 
   return (
-    <Container className='mt-5'>
+    <Container className='my-5'>
       <Row xs={12} md={5} className="g-2">
         {imageUrls.map((imageUrl, idx) => (
           <Col key={idx}>

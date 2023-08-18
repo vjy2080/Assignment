@@ -4,7 +4,7 @@ const contact = () => {
     return (
         <>
         
-        <div className="container bg-secondary-subtle rounded-5 mt-5 p-5">
+        <div className="container bg-secondary-subtle rounded-5 my-5 p-5">
   <div className="content">
     <div className="left-side">
       <div className="address details">
