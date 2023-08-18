@@ -26,10 +26,9 @@ function ProductPage() {
   ];
 
 
-
   return (
-    <Container>
-      <Row xs={1} md={5} className="g-2">
+    <Container className='mt-5'>
+      <Row xs={12} md={5} className="g-2">
         {imageUrls.map((imageUrl, idx) => (
           <Col key={idx}>
             <Card>
@@ -37,11 +36,10 @@ function ProductPage() {
               <Card.Body>
                 <Card.Title>Shop-Item {idx + 1}</Card.Title>
                 <Card.Text>
-                  Decscription of {idx + 1},<br /> Found more detail of {idx + 1} click below link.
+                  Decscription of {idx + 1},
                 </Card.Text>
-                <div className="btn  w-100">
-                  <Button variant="primary"><a href="./" className='text-decoration-none text-light'>Click Here</a></Button>
-                </div>
+                <Button className='m-1' as="input" size='sm' variant="primary" type="button" value="Add to cart" />
+                <Button className='m-1' as="input" size='sm' variant="secondary" type="button" value="Buy Now" />
               </Card.Body>
             </Card>
           </Col>

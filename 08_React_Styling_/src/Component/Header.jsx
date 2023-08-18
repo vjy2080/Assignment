@@ -21,7 +21,7 @@ function Header() {
               navbarScroll
             >
               <Nav.Link>
-                <Link className="text-decoration-none mx-3 text-light" to="/">
+                <Link className="text-decoration-none mx-3 text-light" exact to="/">
                   Home
                 </Link>
               </Nav.Link>
@@ -41,6 +41,12 @@ function Header() {
                 {" "}
                 <Link className="text-decoration-none text-light" to="/contact">
                   Contact
+                </Link>{" "}
+              </Nav.Link>
+              <Nav.Link>
+                {" "}
+                <Link className="text-decoration-none text-light" to="/login">
+                  Login
                 </Link>{" "}
               </Nav.Link>
               {/* 
