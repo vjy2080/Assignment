@@ -1,17 +1,14 @@
 import React from 'react';
-import * as ReactDOM from "react-dom/client";
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+// import * as ReactDOM from "react-dom/client";
+import { createBrowserRouter } from "react-router-dom";
 import Hero from './Bike/Hero/Hero';
-import Hero from './Bike/Royal_Enfield/Royal_Enfield';
-import Karizma_XMR_210 from './Bike/Hero/karizma_xmr_210';
-import XPulse_400 from './Bike/Hero/XPulse_400';
-import Xtreme_160R from './Bike/Hero/Xtreme_160R';
-import Hunter_350 from './Bike/Royal_Enfield/Hunter_350';
+import RoyalEnfield from './Bike/Royal_Enfield/RoyalEnfield';
+import KarizmaXMR210 from './Bike/Hero/Karizmaxmr210';
+import XPulse400 from './Bike/Hero/XPulse400';
+import Xtreme160R from './Bike/Hero/Xtreme160R';
+import Hunter350 from './Bike/Royal_Enfield/Hunter350';
 import Meteor from './Bike/Royal_Enfield/Meteor';
-import Thunderbird_350X from './Bike/Royal_Enfield/Thunderbird_350X';
+import Thunderbird350X from './Bike/Royal_Enfield/Thunderbird350X';
 
 const router = createBrowserRouter([
     {
@@ -19,36 +16,38 @@ const router = createBrowserRouter([
         element: <Hero />,
         children: [
             {
-                path: "Karizma_XMR_210",
-                element: <Karizma_XMR_210 />,
+                path: "KarizmaXMR210",
+                element: <KarizmaXMR210 />,
             },
             {
-                path: "XPulse_400",
-                element: <XPulse_400 />,
+                path: "XPulse400",
+                element: <XPulse400 />,
             },
             {
-                path: "Xtreme_160R",
-                element: <Xtreme_160R />,
+                path: "Xtreme160R",
+                element: <Xtreme160R />,
             },
         ],
     },
     {
-        path: "/Royal_Enfield",
-        element: <Royal_Enfield />,
+        path: "/RoyalEnfield",
+        element: <RoyalEnfield />,
 
         children: [
             {
-                path: "Hunter_350",
-                element: <Hunter_350 />,
+                path: "Hunter350",
+                element: <Hunter350 />,
             },
             {
                 path: "Meteor",
                 element: <Meteor />,
             },
             {
-                path: "Thunderbird_350X",
-                element: <Thunderbird_350X />,
+                path: "Thunderbird350X",
+                element: <Thunderbird350X />,
             },
         ],
     },
 ]);
+
+export default router;
