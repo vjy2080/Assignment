@@ -1,5 +1,4 @@
 import React from 'react';
-// import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router-dom";
 import Hero from './Bike/Hero/Hero';
 import RoyalEnfield from './Bike/Royal_Enfield/RoyalEnfield';
@@ -9,8 +8,17 @@ import Xtreme160R from './Bike/Hero/Xtreme160R';
 import Hunter350 from './Bike/Royal_Enfield/Hunter350';
 import Meteor from './Bike/Royal_Enfield/Meteor';
 import Thunderbird350X from './Bike/Royal_Enfield/Thunderbird350X';
+import Home from './CommonCompo/Home';
+import NavBar from './CommonCompo/NavBar';
 
 const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <>
+            <NavBar />
+            <Home />
+        </>
+    },
     {
         path: "/Hero",
         element: <Hero />,
