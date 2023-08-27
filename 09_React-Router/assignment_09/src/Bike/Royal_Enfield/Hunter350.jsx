@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Hunter_350() {
+export default function Hunter350() {
     return (
         <div>
             <h1>Royal Enfield Hunter 350</h1>

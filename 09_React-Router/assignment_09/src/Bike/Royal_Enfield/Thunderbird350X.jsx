@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Thunderbird_350X() {
+export default function Thunderbird350X() {
     return (
         <div>
             <h1>Royal Enfield Thunderbird 350X</h1>

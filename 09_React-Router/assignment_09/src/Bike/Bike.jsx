@@ -7,8 +7,8 @@ export default function Bike() {
         <>
 
             <div className="container">
-                <div className="row d-flex justify-content-center mt-2">
-                    <div className="text-center  w-50 pt-2 rounded ">
+                <div className="row  mt-2">
+                    <div className="  w-50 pt-2 rounded ">
                         <div>
                             <Link className='text-decoration-none btn btn-success px-4' to="hero">Hero</Link>
                         </div>
@@ -17,7 +17,7 @@ export default function Bike() {
                         </div>
                     </div>
                 </div>
-                <div className="row my-3 p-3 border border-secondary rounded">
+                <div className="row bgAbout my-3 p-3 border border-secondary rounded">
                     <div className="col">
                         <Outlet></Outlet>
                     </div>

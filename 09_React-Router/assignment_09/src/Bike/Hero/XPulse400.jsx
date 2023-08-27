@@ -3,15 +3,18 @@ import React from 'react';
 export default function XPulse400
 () {
     return (
-        <div>
-            <h1>Hero XPulse 400</h1>
+        <div className='text-center'>
+            <h1 className='mb-4'>Hero XPulse 400</h1>
             <img
+            className='rounded'
                 src="https://naxontech.com/wp-content/uploads/2023/06/Big-news-about-Hero-Xpulse-420-know-when-this-powerful.jpg"
             />
 
             <h2>Key Specifications</h2>
 
-            <table>
+            <div className='w-100 d-flex justify-content-center'>
+
+            <table className='w-50 table table-bordered '>
                 <tbody>
                     <tr>
                         <th>Specification</th>
@@ -47,6 +50,7 @@ export default function XPulse400
                     </tr>
                 </tbody>
             </table>
+        </div>
         </div>
     );
 }
