@@ -15,6 +15,7 @@ export default function RoyalEnfieldRoute() {
 
                 </Route>
             </Routes>
+            <Outlet></Outlet>
         </>
     );
 }
