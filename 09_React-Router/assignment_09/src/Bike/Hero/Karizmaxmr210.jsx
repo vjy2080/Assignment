@@ -5,7 +5,8 @@ export default function KarizmaXMR210
     return (
         <div className='text-center'>
             <h1 className='mb-4'>Hero Karizma XMR 210</h1>
-            <img className='rounded' src="https://i.ytimg.com/vi/kkiTh42mRT4/maxresdefault.jpg" />
+            <img className='rounded' src="https://i.ytimg.com/vi/kkiTh42mRT4/maxresdefault.jpg" alt='Hero Karizma XMR 210'/>
+            
 
             <h2>Key Specifications</h2>
 

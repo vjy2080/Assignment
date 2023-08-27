@@ -31,7 +31,6 @@ function Slider() {
             className="d-block w-100 h-50vh rounded-5 my-3"
             src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/124013/hunter-350-right-front-three-quarter.jpeg?isig=0" alt="Royal Enfield Hunter 350"
 
-            alt="Third slide"
           />
         </Carousel.Item>
         <Carousel.Item>
@@ -39,7 +38,6 @@ function Slider() {
             className="d-block w-100 h-50vh rounded-5 my-3"
             src="https://bd.gaadicdn.com/processedimages/royal-enfield/meteor/source/meteor62de7e2c52273.jpg" alt="Royal Enfield Meteor"
 
-            alt="Third slide"
           />
         </Carousel.Item>
         <Carousel.Item>
@@ -47,7 +45,6 @@ function Slider() {
             className="d-block w-100 h-50vh rounded-5 my-3"
             src="https://imgd.aeplcdn.com/0x0/bw/ec/33557/Royal-Enfield-Thunderbird-350X-Front-threequarter-122867.jpg?wm=0" alt="Royal Enfield Thunderbird 350X"
 
-            alt="Third slide"
           />
         </Carousel.Item>
       </Carousel>

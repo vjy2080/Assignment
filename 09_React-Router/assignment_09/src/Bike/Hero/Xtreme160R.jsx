@@ -8,6 +8,7 @@ export default function Xtreme160R
       <img
         className='rounded'
         src="https://static.autox.com/uploads/2023/06/667A0082.jpg"
+        alt='Hero Xtreme 160R 4V'
       />
 
       <h2 className='my-4'>Key Specifications</h2>

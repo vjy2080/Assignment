@@ -8,6 +8,7 @@ export default function XPulse400
             <img
             className='rounded'
                 src="https://naxontech.com/wp-content/uploads/2023/06/Big-news-about-Hero-Xpulse-420-know-when-this-powerful.jpg"
+                alt='Hero XPulse 400'
             />
 
             <h2>Key Specifications</h2>
