@@ -4,7 +4,9 @@ export default function Thunderbird_350X() {
     return (
         <div>
             <h1>Royal Enfield Thunderbird 350X</h1>
-            <img src="https://imgd.aeplcdn.com/0x0/bw/ec/33557/Royal-Enfield-Thunderbird-350X-Front-threequarter-122867.jpg?wm=0" alt="Royal Enfield Thunderbird 350X" />
+            <img 
+            src="https://imgd.aeplcdn.com/0x0/bw/ec/33557/Royal-Enfield-Thunderbird-350X-Front-threequarter-122867.jpg?wm=0" alt="Royal Enfield Thunderbird 350X" 
+            />
 
             <h2>Key Specifications</h2>
 

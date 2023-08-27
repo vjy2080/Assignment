@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function Karizma_XMR_210() {
+export default function KarizmaXMR210
+    () {
     return (
         <div>
             <h1>Hero Karizma XMR 210</h1>
-            <img src="https://media.zigcdn.com/media/model/2023/Aug/rear-left-view-313378502_930x620.jpg" alt="Karizma XMR 210" />
+            <img src="https://i.ytimg.com/vi/kkiTh42mRT4/maxresdefault.jpg" />
 
             <h2>Key Specifications</h2>
 

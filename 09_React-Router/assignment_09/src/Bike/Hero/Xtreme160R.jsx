@@ -1,10 +1,13 @@
 import React from 'react';
 
-export default function Xtreme_160R() {
+export default function Xtreme160R
+  () {
   return (
     <div>
       <h1>Hero Xtreme 160R 4V</h1>
-      <img src="https://imgd.aeplcdn.com/642x361/n/cw/ec/150815/hero-xtreme-160r-4v-right-side-view2.jpeg?isig=0&q=75" alt="Hero Xtreme 160R 4V" />
+      <img
+        src="https://static.autox.com/uploads/2023/06/667A0082.jpg"
+      />
 
       <h2>Key Specifications</h2>
 

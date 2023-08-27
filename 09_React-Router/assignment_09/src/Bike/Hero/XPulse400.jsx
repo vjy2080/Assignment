@@ -1,10 +1,13 @@
 import React from 'react';
 
-export default function XPulse_400() {
+export default function XPulse400
+() {
     return (
         <div>
             <h1>Hero XPulse 400</h1>
-            <img src="https://karnatakastateopenuniversity.in/wp-content/uploads/2022/10/Hero-Xpulse-400.jpg" alt="Hero XPulse 400" />
+            <img
+                src="https://naxontech.com/wp-content/uploads/2023/06/Big-news-about-Hero-Xpulse-420-know-when-this-powerful.jpg"
+            />
 
             <h2>Key Specifications</h2>
 

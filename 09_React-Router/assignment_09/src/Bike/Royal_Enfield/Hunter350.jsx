@@ -4,7 +4,9 @@ export default function Hunter_350() {
     return (
         <div>
             <h1>Royal Enfield Hunter 350</h1>
-            <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/124013/hunter-350-right-front-three-quarter.jpeg?isig=0" alt="Royal Enfield Hunter 350" />
+            <img 
+            src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/124013/hunter-350-right-front-three-quarter.jpeg?isig=0" alt="Royal Enfield Hunter 350" 
+            />
 
             <h2>Key Specifications</h2>
 

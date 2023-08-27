@@ -4,7 +4,9 @@ export default function Meteor() {
     return (
         <div>
             <h1>Royal Enfield Meteor</h1>
-            <img src="https://bd.gaadicdn.com/processedimages/royal-enfield/meteor/source/meteor62de7e2c52273.jpg" alt="Royal Enfield Meteor" />
+            <img
+             src="https://bd.gaadicdn.com/processedimages/royal-enfield/meteor/source/meteor62de7e2c52273.jpg" alt="Royal Enfield Meteor" 
+             />
 
             <h2>Key Specifications</h2>
 
