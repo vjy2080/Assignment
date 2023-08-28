@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HeroMenu from './HeroMenu';
 import XPulse400 from './XPulse400';
 import Xtreme160R from './Xtreme160R';
@@ -14,7 +14,7 @@ export default function Hero() {
                 <Route path="/xtreme160R" element={<Xtreme160R />} />
             </Route>
         </Routes>
-        <Outlet></Outlet>
+
     </>
     );
 }

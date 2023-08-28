@@ -20,7 +20,7 @@ const HeroRoute = React.lazy(() => {
 const RoyalEnfieldRoute = React.lazy(() => {
     return new Promise((resolve) => {
         setTimeout(
-            () => resolve(import("./Bike/Royal_Enfield/RoyalEnfieldMenu")),
+            () => resolve(import("./Bike/Royal_Enfield/RoyalEnfieldRoute")),
             3000
         );
     });
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         </>
     },
 
-   
+
 
 ]);
 

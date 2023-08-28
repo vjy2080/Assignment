@@ -10,7 +10,9 @@ export default function HeroMenu() {
                 <li><Link className='text-dark text-decoration-none' to="xtreme160R">Xtreme 160R</Link></li>
             </ol>
             <hr className='border border-primary border-2 opacity-50 my-3' />
-            <Outlet></Outlet>
+
+            <Outlet />
+
         </div>
     );
 }

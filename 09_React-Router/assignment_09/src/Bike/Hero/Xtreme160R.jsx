@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function Xtreme160R
-  () {
+export default function Xtreme160R() {
   return (
     <div className='text-center'>
       <h1 className='mb-4'>Hero Xtreme 160R 4V</h1>
@@ -13,11 +12,11 @@ export default function Xtreme160R
 
       <h2 className='my-4'>Key Specifications</h2>
       <div className='w-100 d-flex justify-content-center'>
-        <table className='w-50 table table-bordered '>
+        <table className='w-50 table table-bordered'>
           <tbody>
             <tr>
-              <th>Specification</th>
-              <th>Value</th>
+              <th className='table-dark'>Specification</th>
+              <th className='table-dark'>Value</th>
             </tr>
             <tr>
               <td>Seat Height</td>
@@ -53,4 +52,3 @@ export default function Xtreme160R
     </div>
   );
 }
-
