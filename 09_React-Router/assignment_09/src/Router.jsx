@@ -5,6 +5,9 @@ import NavBar from './CommonCompo/NavBar';
 import Bike from './Bike/Bike';
 import About from './CommonCompo/About';
 import BikeLoader from './CommonCompo/Loader/Loader';
+import Dashboard from './components/Dashboard/Dashboard';
+import Preferences from './components/Preferences/Preferences';
+import Login from './components/Login/Login';
 
 
 
@@ -26,7 +29,21 @@ const RoyalEnfieldRoute = React.lazy(() => {
     });
 });
 
+const [token, setToken] = useState();
+
+if (!token) {
+    return <Login setToken={setToken} />
+}
+
+
 const router = createBrowserRouter([
+    {
+        path: "/dashboard",
+        element: <Dashboard />,
+        path: "/preferences",
+        element: <Preferences />,
+
+    },
     {
         path: "/",
         element: <>
