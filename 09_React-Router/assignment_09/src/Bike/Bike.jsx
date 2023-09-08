@@ -10,7 +10,7 @@ export default function Bike() {
         if (!localStorage.getItem('userEmail')) {
             navigate('/login')
         }
-    }, [])
+    })
 
     return (
         <>
