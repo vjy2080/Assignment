@@ -28,3 +28,13 @@ img {
     margin: 0;
     padding: 0;
 }
+
+
+.registration input {
+    padding: 5px 10px;
+}
+
+.registration label {
+    font-weight: bolder;
+    text-align: center;
+}

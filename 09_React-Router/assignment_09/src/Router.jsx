@@ -5,6 +5,8 @@ import NavBar from './CommonCompo/NavBar';
 import Bike from './Bike/Bike';
 import About from './CommonCompo/About';
 import BikeLoader from './CommonCompo/Loader/Loader';
+import Registration from './components/Registeration.jsx';
+
 
 
 
@@ -31,6 +33,13 @@ const RoyalEnfieldRoute = React.lazy(() => {
 
 const router = createBrowserRouter([
 
+    {
+        path: "/login",
+        element: <>
+            <NavBar />
+            <Registration />
+        </>
+    },
     {
         path: "/",
         element: <>

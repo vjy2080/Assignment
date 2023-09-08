@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import Home from "./Home";
+import Bike from "../Bike/Bike";
+import NavBar from "../CommonCompo/NavBar";
+
 
 function Login() {
   const [emaillog, setEmaillog] = useState(" ");
@@ -12,11 +15,9 @@ function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
-    let pass = localStorage
-      .getItem("sanskarPassword")
-      .replace(/"/g, "");
-    let mail = localStorage.getItem("sanskarEmail").replace(/"/g, "");
-    
+    let pass = localStorage.getItem("userPassword").replace(/"/g, "");
+    let mail = localStorage.getItem("userEmail").replace(/"/g, "");
+
 
     if (!emaillog || !passwordlog) {
       setFlag(true);
@@ -33,7 +34,7 @@ function Login() {
     <div>
       {home ? (
         <form onSubmit={handleLogin}>
-          <h3>LogIn</h3>
+          <h3 className="text-center text-primary text-decoration-underline">Login</h3>
           <div className="form-group">
             <label>Email</label>
             <input
@@ -53,10 +54,12 @@ function Login() {
               onChange={(event) => setPasswordlog(event.target.value)}
             />
           </div>
+          <div className="text-center my-3">
 
-          <button type="submit" className="btn btn-dark btn-lg btn-block">
-            Login
-          </button>
+            <button type="submit" className="btn btn-dark btn-sm btn-block">
+              Login
+            </button>
+          </div>
 
           {flag && (
             <Alert color="primary" variant="warning">
@@ -65,7 +68,9 @@ function Login() {
           )}
         </form>
       ) : (
-        <Home />
+        <>
+          <Home />
+        </>
       )}
     </div>
   );
