@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import Home from "./Home";
-import Bike from "../Bike/Bike";
-import NavBar from "../CommonCompo/NavBar";
 
 
 function Login() {
@@ -59,6 +57,7 @@ function Login() {
             <button type="submit" className="btn btn-dark btn-sm btn-block">
               Login
             </button>
+          
           </div>
 
           {flag && (

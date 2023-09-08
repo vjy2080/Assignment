@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Link, Outlet, useNavigate } from "react-router-dom";
+
 
 
 export default function Bike() {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (!localStorage.getItem('userEmail')) {
+            navigate('/login')
+        }
+    }, [])
+
     return (
         <>
 

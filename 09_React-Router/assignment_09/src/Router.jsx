@@ -34,12 +34,20 @@ const RoyalEnfieldRoute = React.lazy(() => {
 const router = createBrowserRouter([
 
     {
-        path: "/login",
+        path: "/signup",
         element: <>
-            <NavBar/>
+            <NavBar />
             <Registration />
         </>
     },
+    {
+        path: "/login",
+        element: <>
+            <NavBar />
+            <Registration />
+        </>
+    },
+
     {
         path: "/",
         element: <>

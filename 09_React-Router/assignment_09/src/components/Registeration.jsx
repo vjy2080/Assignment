@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import { Form, Alert } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import Login from "./Login";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-  // const [profession, setProfession] = useState("");
 
   const [flag, setFlag] = useState(false);
   const [login, setLogin] = useState(true);
 
+  const navigate = useNavigate()
 
 
   function handleFormSubmit(e) {
     e.preventDefault();
 
     if (!name || !email || !password || !phone) {
-      // ||  !profession ) {
       setFlag(true);
     } else {
       setFlag(false);
       localStorage.setItem("userEmail", JSON.stringify(email));
       localStorage.setItem("userPassword", JSON.stringify(password));
-      console.log("Saved in Local Storage");
-
+      navigate('/bike')
       setLogin(!login);
+      console.log("Saved in Local Storage");
     }
   }
 
@@ -88,19 +88,6 @@ function Registration() {
                 />
               </div>
 
-              {/* <div className="form-group">
-              <label>Choose your Profession</label>
-              <Form.Control
-                as="select"
-                onChange={(event) => setProfession(event.target.value)}
-              >
-                <option>Select</option>
-                <option>Artist</option>
-                <option>Photographer</option>
-                <option>Team Player</option>
-                <option>Full Stack</option>
-              </Form.Control>
-            </div> */}
               <div className="text-center my-3">
 
                 <button type="submit" className="btn btn-primary btn-sm px-5 btn-block">
@@ -113,7 +100,7 @@ function Registration() {
               </p>
               {flag && (
                 <Alert color="primary" variant="danger">
-                  I got it you are in hurry! But every Field is important!
+                  I got it you are in hurry! <br /> But every Field is important!
                 </Alert>
               )}
             </form>
