@@ -9,7 +9,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { BsSearch } from "react-icons/bs";
 
-export default function NavBar(props) {
+export default function NavBar() {
+
     return (
         <>
             <Navbar bg="dark" data-bs-theme="dark">
@@ -31,7 +32,7 @@ export default function NavBar(props) {
                                 <Button type="search"><BsSearch /></Button>
                             </InputGroup>
                         </Form>
-                        <Link className='nav-link' to="/login" onClick={props.login}>Sign-In</Link>
+                        <Link className='nav-link' to="/login">Sign-In</Link>
                     </Nav>
                 </Container>
             </Navbar>
