@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import Assignment10 from "./Components/Assignment10";
 import Example1 from "./Components/Example1.jsx";
-import Example2 from "./Components/Example2.jsx";
+import CreateProduct from "./Components/CreateProduct";
 
 const router = createBrowserRouter([
     {
@@ -19,14 +19,17 @@ const router = createBrowserRouter([
             <NavBar />
             <Example1 />
         </>,
+        children: [
+            {
+                path: "/CreateProduct",
+                element: <>
+                    <NavBar />
+                    <CreateProduct />
+                </>,
+            },
+        ],
     },
-    {
-        path: "/Example2",
-        element: <>
-            <NavBar />
-            <Example2 />
-        </>,
-    },
+
 ]);
 
 export default router;
