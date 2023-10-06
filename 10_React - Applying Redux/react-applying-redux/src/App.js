@@ -1,8 +1,9 @@
+import Assignment10 from "./Components/Assignment10";
 
 function App() {
   return (
     <>
-      App
+      <Assignment10 />
     </>
   );
 }
