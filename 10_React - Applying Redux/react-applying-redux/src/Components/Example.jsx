@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-
+import { FaSearch } from "react-icons/fa";
 export default function Example() {
     return (
         <>
@@ -16,25 +16,26 @@ export default function Example() {
                 <div>
                     <Navbar className="bg-body-tertiary justify-content-between border px-1">
                         <Form inline>
-                            <InputGroup>
-                                <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                            <InputGroup className=''>
                                 <Form.Control
-                                    placeholder="Username"
-                                    aria-label="Username"
+                                    placeholder="Search Here"
+                                    aria-label="Search Here"
                                     aria-describedby="basic-addon1"
                                 />
+                                <div className='btn btn-primary' as={Link} to='/CreateProduct'><FaSearch /></div>
+
                             </InputGroup>
                         </Form>
                         <Form inline>
                             <Row>
                                 <Col xs="auto">
-                                    <div className='btn btn-primary' as={Link} to='/CreateProduct'>+ Create Product</div>
+                                    <div className='btn btn-primary ' as={Link} to='/CreateProduct'>+ Create Product</div>
                                 </Col>
                             </Row>
                         </Form>
                     </Navbar>
                 </div>
-                <Table striped bordered hover>
+                <Table striped bordered hover className='text-center'>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -45,10 +46,14 @@ export default function Example() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>striped bordered hover className</td>
+                            <td>Rs. 330.75</td>
+                            <td>Fashion</td>
+                            <td >
+                                <div className="mx-1 btn btn-primary">Read</div>
+                                <div className="mx-1 btn btn-info">Edit</div>
+                                <div className="mx-1 btn btn-danger">Delete</div>
+                            </td>
                         </tr>
                     </tbody>
                 </Table>

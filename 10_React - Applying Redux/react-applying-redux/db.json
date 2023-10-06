@@ -1,0 +1,204 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "Men's Classic T-Shirt",
+      "category": "T-Shirts",
+      "price": 20.99
+    },
+    {
+      "name": "Women's Slim Fit Jeans",
+      "category": "Jeans",
+      "price": 39.99
+    },
+    {
+      "name": "Unisex Hooded Sweatshirt",
+      "category": "Sweatshirts",
+      "price": 32.50
+    },
+    {
+      "name": "Men's Running Shoes",
+      "category": "Shoes",
+      "price": 69.99
+    },
+    {
+      "name": "Women's Summer Dress",
+      "category": "Dresses",
+      "price": 45.00
+    },
+    {
+      "name": "Men's Casual Shirt",
+      "category": "Shirts",
+      "price": 25.00
+    },
+    {
+      "name": "Women's Yoga Leggings",
+      "category": "Leggings",
+      "price": 29.99
+    },
+    {
+      "name": "Unisex Baseball Cap",
+      "category": "Hats",
+      "price": 15.00
+    },
+    {
+      "name": "Men's Slim Fit Suit",
+      "category": "Suits",
+      "price": 129.99
+    },
+    {
+      "name": "Women's High Heel Shoes",
+      "category": "Shoes",
+      "price": 59.99
+    },
+    {
+      "name": "Men's Cargo Shorts",
+      "category": "Shorts",
+      "price": 22.50
+    },
+    {
+      "name": "Women's Leather Jacket",
+      "category": "Jackets",
+      "price": 89.99
+    },
+    {
+      "name": "Unisex Beanie Hat",
+      "category": "Hats",
+      "price": 12.99
+    },
+    {
+      "name": "Men's Athletic Socks",
+      "category": "Socks",
+      "price": 9.99
+    },
+    {
+      "name": "Women's Winter Coat",
+      "category": "Jackets",
+      "price": 79.99
+    },
+    {
+      "name": "Men's Polo Shirt",
+      "category": "Shirts",
+      "price": 18.99
+    },
+    {
+      "name": "Women's Casual Blouse",
+      "category": "Shirts",
+      "price": 21.50
+    },
+    {
+      "name": "Unisex Scarf",
+      "category": "Accessories",
+      "price": 8.50
+    },
+    {
+      "name": "Men's Formal Dress Shoes",
+      "category": "Shoes",
+      "price": 49.99
+    },
+    {
+      "name": "Women's Athletic Sneakers",
+      "category": "Shoes",
+      "price": 34.99
+    },
+    {
+      "name": "Men's Winter Jacket",
+      "category": "Jackets",
+      "price": 59.99
+    },
+    {
+      "name": "Women's Beach Hat",
+      "category": "Hats",
+      "price": 17.00
+    },
+    {
+      "name": "Unisex Sunglasses",
+      "category": "Accessories",
+      "price": 14.99
+    },
+    {
+      "name": "Men's Swim Trunks",
+      "category": "Swimwear",
+      "price": 19.99
+    },
+    {
+      "name": "Women's Maxi Skirt",
+      "category": "Skirts",
+      "price": 27.99
+    },
+    {
+      "name": "Unisex Leather Belt",
+      "category": "Belts",
+      "price": 22.00
+    },
+    {
+      "name": "Men's Hiking Boots",
+      "category": "Shoes",
+      "price": 64.99
+    },
+    {
+      "name": "Women's Denim Jacket",
+      "category": "Jackets",
+      "price": 45.00
+    },
+    {
+      "name": "Unisex Gloves",
+      "category": "Accessories",
+      "price": 9.00
+    },
+    {
+      "name": "Men's Baseball Jersey",
+      "category": "Shirts",
+      "price": 23.99
+    },
+    {
+      "name": "Women's Ankle Boots",
+      "category": "Shoes",
+      "price": 37.50
+    },
+    {
+      "name": "Unisex Watch",
+      "category": "Accessories",
+      "price": 55.00
+    },
+    {
+      "name": "Men's Chino Pants",
+      "category": "Pants",
+      "price": 34.99
+    },
+    {
+      "name": "Women's Pajama Set",
+      "category": "Sleepwear",
+      "price": 18.00
+    },
+    {
+      "name": "Unisex Backpack",
+      "category": "Bags",
+      "price": 28.50
+    },
+    {
+      "name": "Men's V-Neck Sweater",
+      "category": "Sweaters",
+      "price": 27.99
+    },
+    {
+      "name": "Women's Scarf",
+      "category": "Accessories",
+      "price": 13.00
+    }
+  ]
+  
+}
