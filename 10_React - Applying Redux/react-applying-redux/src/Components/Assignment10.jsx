@@ -9,13 +9,11 @@ export default function Assignment10() {
                 <h2>Module-13 React - Applying Redux</h2>
                 <h3>Vijay G. Prajapati</h3>
             </header>
-
             <ol>
                 <hr className="hr" />
                 <li>
                     What is Redux?
                 </li>
-
                 <p>
                     <b>Answer :- </b>
                     <ul>
@@ -30,7 +28,6 @@ export default function Assignment10() {
                         <li>It subscribes to the Redux store, checks to see if the data which your component wants have changed, and re-renders your component.</li>
                     </ul>
                 </p>
-
                 <hr />
                 <li> What is Redux Thunk used for?</li>
                 <p>
@@ -56,21 +53,39 @@ export default function Assignment10() {
                     <h4>Redux flow with thunk</h4>
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220419010950/reduxwiththunk.png" alt="Redux flow with thunk" />
                 </p>
-
                 <hr />
                 <li> What is Pure Component? When to use Pure Component over Component?</li>
                 <p>
                     <b>Answer :- </b>
+                    <ul>
 
+                        <li>To achieve performance optimization, React introduces a valuable tool called pure components.</li>
+                        <li>At the core of pure components lies the concept of shallow comparison,</li>
+                        <li>which involves comparing the current and next props and state.</li>
+                        <li>This comparison enables React to determine whether a re-rendering of the component is necessary,</li>
+                        <li>thus minimizing unnecessary rendering and enhancing overall performance.</li>
+                        <li>We may choose React.PureComponent over React.Component if any of the below conditions is satisfied:
+                            <ol>
+                                <li>State/Props should be an immutable object</li>
+                                <li>State/Props should not have a hierarchy</li>
+                                <li>You should call forceUpdate &#40; &#41; when data changes</li>
+                            </ol>
+                        </li>
+                    </ul>
                 </p>
-
                 <hr />
                 <li> What is the second argument that can optionally be passed tosetState and what is its purpose?</li>
                 <p>
                     <b>Answer :- </b>
-
+                    <ul>
+                        <li>The second argument that can optionally be passed to setState is a callback function,</li>
+                        <li>which gets called immediately after the setState is completed and the components get re-rendered. </li>
+                        <li>If you want your program to update the value of a state using setState,</li>
+                        <li>Then perform certain actions on the updated value of state then you must specify those actions in a function.</li>
+                        <li>Which should be the second argument of the setState.</li>
+                        <li>If we would not do so then those actions will be performed on the previous value of state because of asynchronous nature of setState.</li>
+                    </ul>
                 </p>
-
             </ol>
         </>
     );
