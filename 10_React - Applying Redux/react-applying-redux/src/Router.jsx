@@ -2,8 +2,8 @@ import * as React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import NavBar from "./Components/Navbar";
 import Assignment10 from "./Components/Assignment10";
-import Example1 from "./Components/Example1.jsx";
-import CreateProduct from "./Components/CreateProduct";
+import Example from "./Components/Example.jsx";
+// import CreateProduct from "./Components/CreateProduct";
 
 const router = createBrowserRouter([
     {
@@ -14,20 +14,20 @@ const router = createBrowserRouter([
         </>,
     },
     {
-        path: "/Example1",
+        path: "/Example",
         element: <>
             <NavBar />
-            <Example1 />
+            <Example />
         </>,
-        children: [
-            {
-                path: "/CreateProduct",
-                element: <>
-                    <NavBar />
-                    <CreateProduct />
-                </>,
-            },
-        ],
+        // children: [
+        //     {
+        //         path: "/CreateProduct",
+        //         element: <> 
+        //             <NavBar />
+        //             <CreateProduct />
+        //         </>,
+        //     },
+        // ],
     },
 
 ]);
