@@ -6,9 +6,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 export default function Example() {
     const [product, setProduct] = useState("");
@@ -40,7 +40,7 @@ export default function Example() {
                 <td>{item.category}</td>
                 <td>
                     <div onClick={() => readProduct(item)} className="mx-1 btn btn-primary">Read</div>
-                    <div onClick={() => editProduct(item)} className="mx-1 btn btn-info">Edit</div>
+                    <div onClick={() => updateProduct(item)} className="mx-1 btn btn-info">Edit</div>
                     <div onClick={() => deleteProduct(item)} className="mx-1 btn btn-danger">Delete</div>
                 </td>
             </tr>
@@ -79,12 +79,10 @@ export default function Example() {
         // Implement the read product functionality here
     }
 
-    const editProduct = (item) => {
+    const updateProduct = async (item) => {
+        console.log("updateProduct-called");
         setSelectedProduct(item);
         handleShow();
-    }
-
-    const updateProduct = async () => {
         try {
             const response = await fetch(`http://localhost:3004/profile/${selectedProduct.id}`, {
                 method: 'PUT',
@@ -93,6 +91,7 @@ export default function Example() {
                 },
                 body: JSON.stringify(selectedProduct),
             });
+            console.log(response);
             if (response.ok) {
                 const updatedProduct = await response.json();
                 const updatedData = productData.map(item => (item.id === updatedProduct.id ? updatedProduct : item));
@@ -146,7 +145,7 @@ export default function Example() {
                     <Form inline="true">
                         <Row>
                             <Col xs="auto">
-                                <Button variant="primary" onClick={createProduct}>+ Create Product</Button>
+                                <Button as={Link} to='/create' className='btn btn primary'>+ Create Product</Button>
                             </Col>
                         </Row>
                     </Form>
@@ -170,6 +169,7 @@ export default function Example() {
                     </Modal.Header>
                     <Modal.Body>
                         {/* Render the form for editing the selected product */}
+                        {selectedProduct}
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
