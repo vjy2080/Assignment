@@ -14,6 +14,14 @@ export default function CreateProduct() {
         navigate('/Example')
     };
 
+   
+
+    const addProduct = () => {
+        console.log("product added");
+
+        navigate('/Example')
+
+    }
 
     return (
         <>
@@ -56,7 +64,7 @@ export default function CreateProduct() {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={addProduct}>
                         Add Product
                     </Button>
                 </Modal.Footer>
