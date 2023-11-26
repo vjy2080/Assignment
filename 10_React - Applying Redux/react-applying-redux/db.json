@@ -27,7 +27,7 @@
     {
       "name": "Unisex Hooded Sweatshirt",
       "category": "Sweatshirts",
-      "price": 32.50
+      "price": 32.5
     },
     {
       "name": "Men's Running Shoes",
@@ -37,12 +37,12 @@
     {
       "name": "Women's Summer Dress",
       "category": "Dresses",
-      "price": 45.00
+      "price": 45
     },
     {
       "name": "Men's Casual Shirt",
       "category": "Shirts",
-      "price": 25.00
+      "price": 25
     },
     {
       "name": "Women's Yoga Leggings",
@@ -52,7 +52,7 @@
     {
       "name": "Unisex Baseball Cap",
       "category": "Hats",
-      "price": 15.00
+      "price": 15
     },
     {
       "name": "Men's Slim Fit Suit",
@@ -67,7 +67,7 @@
     {
       "name": "Men's Cargo Shorts",
       "category": "Shorts",
-      "price": 22.50
+      "price": 22.5
     },
     {
       "name": "Women's Leather Jacket",
@@ -97,12 +97,12 @@
     {
       "name": "Women's Casual Blouse",
       "category": "Shirts",
-      "price": 21.50
+      "price": 21.5
     },
     {
       "name": "Unisex Scarf",
       "category": "Accessories",
-      "price": 8.50
+      "price": 8.5
     },
     {
       "name": "Men's Formal Dress Shoes",
@@ -122,7 +122,7 @@
     {
       "name": "Women's Beach Hat",
       "category": "Hats",
-      "price": 17.00
+      "price": 17
     },
     {
       "name": "Unisex Sunglasses",
@@ -142,7 +142,7 @@
     {
       "name": "Unisex Leather Belt",
       "category": "Belts",
-      "price": 22.00
+      "price": 22
     },
     {
       "name": "Men's Hiking Boots",
@@ -152,12 +152,12 @@
     {
       "name": "Women's Denim Jacket",
       "category": "Jackets",
-      "price": 45.00
+      "price": 45
     },
     {
       "name": "Unisex Gloves",
       "category": "Accessories",
-      "price": 9.00
+      "price": 9
     },
     {
       "name": "Men's Baseball Jersey",
@@ -167,12 +167,12 @@
     {
       "name": "Women's Ankle Boots",
       "category": "Shoes",
-      "price": 37.50
+      "price": 37.5
     },
     {
       "name": "Unisex Watch",
       "category": "Accessories",
-      "price": 55.00
+      "price": 55
     },
     {
       "name": "Men's Chino Pants",
@@ -182,12 +182,12 @@
     {
       "name": "Women's Pajama Set",
       "category": "Sleepwear",
-      "price": 18.00
+      "price": 18
     },
     {
       "name": "Unisex Backpack",
       "category": "Bags",
-      "price": 28.50
+      "price": 28.5
     },
     {
       "name": "Men's V-Neck Sweater",
@@ -197,8 +197,7 @@
     {
       "name": "Women's Scarf",
       "category": "Accessories",
-      "price": 13.00
+      "price": 13
     }
   ]
-  
 }
