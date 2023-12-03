@@ -41,6 +41,7 @@ export default function Example() {
                 <td>
                     <div onClick={() => readProduct(item)} className="mx-1 btn btn-primary">Read</div>
                     <div onClick={() => updateProduct(item)} className="mx-1 btn btn-info">Edit</div>
+                    {/* <Button as={Link} to='/edit' className='btn btn primary'>Edit</Button> */}
                     <div onClick={() => deleteProduct(item)} className="mx-1 btn btn-danger">Delete</div>
                 </td>
             </tr>
@@ -55,54 +56,18 @@ export default function Example() {
 
     const handleShow = () => setShow(true);
 
-    const createProduct = async () => {
-        try {
-            const response = await fetch('http://localhost:3004/profile', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(newProduct),
-            });
-            if (response.ok) {
-                const data = await response.json();
-                setProductData([...productData, data]);
-                updateProductTable([...productData, data]);
-                setNewProduct({ name: '', price: '', category: '' });
-            }
-        } catch (error) {
-            console.error('Error creating product:', error);
-        }
-    };
+
 
     const readProduct = (item) => {
         // Implement the read product functionality here
+        console.log("Read Product - Called");
+    }
+    const updateProduct = (item) => {
+        // Implement the read product functionality here
+        console.log("Update Product - Called");
     }
 
-    const updateProduct = async (item) => {
-        console.log("updateProduct-called");
-        setSelectedProduct(item);
-        handleShow();
-        try {
-            const response = await fetch(`http://localhost:3004/profile/${selectedProduct.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(selectedProduct),
-            });
-            console.log(response);
-            if (response.ok) {
-                const updatedProduct = await response.json();
-                const updatedData = productData.map(item => (item.id === updatedProduct.id ? updatedProduct : item));
-                setProductData(updatedData);
-                updateProductTable(updatedData);
-                handleClose();
-            }
-        } catch (error) {
-            console.error('Error updating product:', error);
-        }
-    };
+
 
     const deleteProduct = async (item) => {
         try {
@@ -112,6 +77,7 @@ export default function Example() {
             if (response.ok) {
                 const updatedData = productData.filter(product => product.id !== item.id);
                 setProductData(updatedData);
+                fetchData();
                 updateProductTable(updatedData);
             }
         } catch (error) {
@@ -162,25 +128,7 @@ export default function Example() {
                 </thead>
                 <tbody>{product}</tbody>
             </Table>
-            {selectedProduct && (
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Edit Product</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        {/* Render the form for editing the selected product */}
-                        {selectedProduct}
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={updateProduct}>
-                            Save Changes
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-            )}
+
         </div>
     );
 }

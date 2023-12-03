@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -10,6 +10,27 @@ export default function CreateProduct() {
     const navigate = useNavigate()
     const [newProduct, setNewProduct] = useState({ name: '', price: '', category: '' });
     const [productData, setProductData] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const handleShow = () => setShow(true);
+
+    useEffect(() => {
+        const fetchProductData = async () => {
+            try {
+                const response = await fetch(`http://localhost:3004/profile/${selectedProduct.id}`);
+                if (response.ok) {
+                    const product = await response.json();
+                    setNewProduct(product);
+                }
+            } catch (error) {
+                console.error('Error fetching product data:', error);
+            }
+        };
+    
+        if (selectedProduct) {
+            fetchProductData(console.log("called"));
+        }
+    }, [selectedProduct]);
+    
 
     const handleClose = () => {
         setShow(false);
@@ -17,36 +38,39 @@ export default function CreateProduct() {
     };
 
     const handleNameChange = (e) => {
-        setNewProduct({ ...newProduct, name: e.target.value });
+        setNewProduct((prevProduct) => ({ ...prevProduct, name: e.target.value }));
     };
 
     const handlePriceChange = (e) => {
-        setNewProduct({ ...newProduct, price: e.target.value });
+        setNewProduct((prevProduct) => ({ ...prevProduct, price: e.target.value }));
     };
 
     const handleCategoryChange = (e) => {
-        setNewProduct({ ...newProduct, category: e.target.value });
+        setNewProduct((prevProduct) => ({ ...prevProduct, category: e.target.value }));
     };
 
-    const addProduct = async () => {
+    const updateProduct = async (item) => {
+        console.log("updateProduct-called");
+        setSelectedProduct(item);
+        // handleShow();
         try {
-            const response = await fetch('http://localhost:3004/profile', {
-                method: 'POST',
+            const response = await fetch(`http://localhost:3004/profile/${selectedProduct.id}`, {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(newProduct),
+                body: JSON.stringify(selectedProduct),
             });
+            console.log(response);
             if (response.ok) {
-                const data = await response.json();
-                setProductData([...productData, data]);
-                setNewProduct({ name: '', price: '', category: '' });
-                setShow(false);
-                navigate('/Example')
-
+                const updatedProduct = await response.json();
+                const updatedData = productData.map(item => (item.id === updatedProduct.id ? updatedProduct : item));
+                setProductData(updatedData);
+                // updateProductTable(updatedData);
+                handleClose();
             }
         } catch (error) {
-            console.error('Error creating product:', error);
+            console.error('Error updating product:', error);
         }
     };
 
@@ -54,7 +78,7 @@ export default function CreateProduct() {
         <>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Create Product</Modal.Title>
+                    <Modal.Title>Update Product</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
@@ -97,8 +121,8 @@ export default function CreateProduct() {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={addProduct}>
-                        Add Product
+                    <Button variant="primary" onClick={updateProduct}>
+                        Update Product
                     </Button>
                 </Modal.Footer>
             </Modal>
