@@ -39,10 +39,9 @@ export default function Example() {
                 <td>{item.price}</td>
                 <td>{item.category}</td>
                 <td>
-                    <div onClick={() => readProduct(item)} className="mx-1 btn btn-primary">Read</div>
-                    <div onClick={() => updateProduct(item)} className="mx-1 btn btn-info">Edit</div>
-                    {/* <Button as={Link} to='/edit' className='btn btn primary'>Edit</Button> */}
-                    <div onClick={() => deleteProduct(item)} className="mx-1 btn btn-danger">Delete</div>
+                    <Button onClick={() => readProduct(item)} label="Read" className="btn-primary" >Read</Button>
+                    <Button onClick={() => updateProduct(item)} label="Edit" className="mx-2 btn-info" >Edit</Button>
+                    <Button onClick={() => deleteProduct(item)} label="Delete" className="btn-danger" >Delete</Button>
                 </td>
             </tr>
         ));
